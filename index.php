@@ -36,7 +36,7 @@
 // jquery ready start
 $(document).ready(function() {
 	// jQuery code
-}); 
+});
 // jquery end
 </script>
 
@@ -49,7 +49,7 @@ $(document).ready(function() {
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <div class="collapse navbar-collapse" id="navbarTop">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">   Marcas principales </a>
@@ -65,14 +65,14 @@ $(document).ready(function() {
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item"><a href="#" class="nav-link" > Android </a></li>
-          <img src="https://candymanvendingservice.com/wp-content/uploads/2016/11/icons-apple-android.png" width="50px" height="25px"> 
+          <img src="https://candymanvendingservice.com/wp-content/uploads/2016/11/icons-apple-android.png" width="50px" height="25px">
       <li class="nav-item"><a href="http://bootstrap-ecommerce.com/" class="nav-link" > iOS  </a></li>
-      
+
         </ul> <!-- barra de navegacion.// -->
       </div> <!-- collapse.// -->
     </div>
   </nav>
-  
+
   <section class="header-main shadow-sm">
     <div class="container">
   <div class="row-sm align-items-center">
@@ -85,9 +85,9 @@ $(document).ready(function() {
         <a class="dropdown-item" href="#">Niños</a>
         <a class="dropdown-item" href="#">Marcas </a>
         <a class="dropdown-item" href="#">Zapatillas </a>
-        <a class="dropdown-item" href="#">Ofertas</a> 
+        <a class="dropdown-item" href="#">Ofertas</a>
       </div>
-    </div> 
+    </div>
     </div>
     <div class="col-lg-11-24 col-sm-8">
         <form action="#" class="py-1">
@@ -95,7 +95,7 @@ $(document).ready(function() {
               <input type="text" class="form-control" style="width:50%;" placeholder="Buscar...">
               <div class="input-group-append">
                 <button class="btn btn-dark" type="submit">
-                  <i class="fa fa-search"></i> Buscar 
+                  <i class="fa fa-search"></i> Buscar
                 </button>
               </div>
             </div>
@@ -110,7 +110,7 @@ $(document).ready(function() {
               <div class="icon-wrap"><i class="text-dark icon-sm fa fa-user"></i></div>
               <div class="text-wrap text-dark">
                 Iniciar sesión <br>
-                Mi Cuenta <i class="fa fa-caret-down"></i> 
+                Mi Cuenta <i class="fa fa-caret-down"></i>
               </div>
             </div>
           </a>
@@ -137,7 +137,7 @@ $(document).ready(function() {
             <div class="icontext">
               <div class="icon-wrap"><i class="text-dark icon-sm fa fa-shopping-cart"></i></div>
               <div class="text-wrap text-dark">
-                Protección <br> De Compra 
+                Protección <br> De Compra
               </div>
             </div>
           </a>
@@ -159,12 +159,12 @@ $(document).ready(function() {
     </div> <!-- container.// -->
   </section> <!-- fin del header .// -->
   </header> <!-- section-header.// -->
-  
+
   <!-- ========================= MAIN ========================= -->
   <section>
   <div>
     <div class="col-md-12">
-  
+
   <!-- ================= slider ================= -->
   <div class="slide mb-3">
     <div class="carousel-inner">
@@ -178,20 +178,20 @@ $(document).ready(function() {
     </div>
     </div>
   <!-- ============== fin main slider // ============= -->
-  
+
     </div> <!-- col.// -->
-    
+
       </div> <!-- row.// -->
     </div> <!-- card-body .// -->
   </div> <!-- card.// -->
-  
+
   </div> <!-- container .//  -->
   </section>
   <!-- ========================= FIN MAIN // ========================= -->
-  
 
-  
-  
+
+
+
   <!-- ========================= COMIENZO SECCION ========================= -->
   <section>
     <div class="col-xs-1 mb-5" align="center" >
@@ -299,17 +299,17 @@ $(document).ready(function() {
                         <li><a href="#">44</a></li>
                       </ul>
                     </span>
-              
+
               <span class="product-price2">
                       $<b>4,999.00</b>
                     </span>
             </div>
           </div>
         </div>
-      
-      
-          
-    
+
+
+
+
     </div> </div>
     <div class="col-12 col-md-4">
       <div class="containerCard">
@@ -354,17 +354,17 @@ $(document).ready(function() {
                        <li><a href="#">44</a></li>
                      </ul>
                    </span>
-             
+
              <span class="product-price2">
                      $<b>5,999.00</b>
                    </span>
            </div>
          </div>
        </div>
-     
-     
-         
-   
+
+
+
+
    </div> </div>
 
    <div class="col-12 col-md-4">
@@ -410,17 +410,17 @@ $(document).ready(function() {
                      <li><a href="#" class="active">44</a></li>
                    </ul>
                  </span>
-           
+
            <span class="product-price2">
                    $<b>6,999.00</b>
                  </span>
          </div>
        </div>
      </div>
-   
-   
-       
- 
+
+
+
+
  </div> </div>
         </div>
 <!-- ========================= NIKE ========================= -->
@@ -469,17 +469,17 @@ $(document).ready(function() {
                                 <li><a href="#">45</a></li>
                               </ul>
                             </span>
-                      
+
                       <span class="product-price">
                               $<b>7,490.00</b>
                             </span>
                     </div>
                   </div>
                 </div>
-              
-              
-                  
-            
+
+
+
+
             </div> </div>
             <div class="col-12 col-md-4">
               <div class="containerCard">
@@ -524,17 +524,17 @@ $(document).ready(function() {
                                <li><a href="#">45</a></li>
                              </ul>
                            </span>
-                     
+
                      <span class="product-price">
                              $<b>4,490.00</b>
                            </span>
                    </div>
                  </div>
                </div>
-             
-             
-                 
-           
+
+
+
+
            </div> </div>
            <div class="col-12 col-md-4">
             <div class="containerCard">
@@ -579,29 +579,29 @@ $(document).ready(function() {
                              <li><a href="#">45</a></li>
                            </ul>
                          </span>
-                   
+
                    <span class="product-price">
                            $<b>5,490.00</b>
                          </span>
                  </div>
                </div>
              </div>
-           
-           
-               
-         
+
+
+
+
          </div> </div>
                 </div>
               </section>
      <!-- container .//  -->
-  
+
     <!-- ========================= FIN PRODUCTOS// ========================= -->
-    
+
     <!-- ========================= VIDEO ========================= -->
     <section class="main___1GGDS color-theme-white___3kPfz text-justify-left___1hCwx content-vertical-align-center___1VV72 medium___QTihu"><div class="content___3Uzc5"><div class=" layer_video___wfGwY "><div class="wallpaperWrapper___gIN48"><picture><source media="(min-width: 960px)" srcset="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/football-fw19-hardwired-clp-video-fullwidth-t-d-combined_tcm190-374112.jpg"><source media="(min-width: 600px)" srcset="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/football-fw19-hardwired-clp-video-fullwidth-t-d-combined_tcm190-374112.jpg"><source srcset="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/football-fw19-hardwired-clp-video-fullwidth-m-combined_tcm190-374113.jpg"><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/football-fw19-hardwired-clp-video-fullwidth-t-d-combined_tcm190-374112.jpg" loading="auto" data-di-id="di-id-f782c1d2-eca90a8d"></picture></div><div class="video-icon-wrapper undefined play-button___23YMB"><svg class="gl-icon play-button__icon___1kIpe" data-di-res-id="1f9298c-a04ae735" data-di-rand="1569458165910"><use xlink:href="#play-shadow"></use></svg></div><div class="is-hidden___ewP-K"><div class="video_overlay___21_2A"><button class="close_video_button___2sMaB" data-di-id="di-id-effcffc4-8e8d9176"><svg class="gl-icon" data-di-res-id="1f9298c-b8644ccc" data-di-rand="1569458165910"><use xlink:href="#close"></use></svg></button><div class=""><iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/pAz3ne0iUOc?showinfo=0&amp;playsinline=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.adidas.es&amp;widgetid=5" id="widget6"></iframe></div></div></div></div><div class="poster_content___26X52 col-s-12 col-m-6 col-l-8 offset-s-0 offset-m-1 offset-l-3"><h1 class="title___udQJ_ withhtml___W0jbB gl-heading--l gl-heading--regular gl-heading--drop-shadow"></h1></div></div></section>
     <!-- ========================= VIDEO .FIN// ========================= -->
-    
-  
+
+
     <!-- ========================= LINKS ========================= -->
     <section class="section-links bg padding-y-lg">
     <div class="container">
@@ -610,7 +610,7 @@ $(document).ready(function() {
     <header class="section-heading heading-line">
       <h4 class="title-section bg text-uppercase">PALABRAS MÁS BUSCADAS</h4>
     </header>
-    
+
     <ul class="list-icon row">
       <li class="col-md-3"><a href="#"><span>Botines Nike</span></a></li>
       <li class="col-md-3"><a href="#"><span>Botines Adidas</span></a></li>
@@ -624,20 +624,20 @@ $(document).ready(function() {
       <li class="col-md-3"><a href="#"><span>Puma Argentina</span></a></li>
       <li class="col-md-3"><a href="#"><span>Zapatos</span></a></li>
       <li class="col-md-3"><a href="#"><span>Remeras</span></a></li>
-      
+
     </ul>
         </div> <!-- col // -->
       </div>
     </div><!-- container // -->
     </section>
     <!-- ========================= LINKS END.// ========================= -->
-    
+
     <!-- ========================= SUSCRIBETE ========================= -->
     <section class="section-subscribe bg-secondary padding-y-lg">
     <div class="container">
-    
+
     <p class="pb-2 text-center white">Suscríbete para obtener ofertas</p>
-    
+
     <div class="row justify-content-md-center">
       <div class="col-lg-4 col-sm-6">
     <form class="row-sm form-noborder">
@@ -651,12 +651,12 @@ $(document).ready(function() {
     <small class="form-text text-white-50">Nunca compartiremos su dirección de correo electrónico con un tercero. </small>
       </div> <!-- col-md-6.// -->
     </div>
-      
-    
+
+
     </div> <!-- container // -->
     </section>
     <!-- ========================= SUSCRIBETE END.//========================= -->
-    
+
     <!-- ========================= FOOTER ========================= -->
     <footer class="section-footer bg-secondary">
       <div class="container">
@@ -685,17 +685,17 @@ $(document).ready(function() {
               <ul class="list-unstyled">
                 <li> <a href="#"> Política de Privacidad </a></li>
                 <li> <a href="#"> Política de Envio Gratis </a></li>
- 
+
               </ul>
             </aside>
             <aside class="col-sm-3">
               <article class="white marginMobile">
                 <h5 class="title">Centro de Atención a Clientes</h5>
                 <p>
-                  <strong>Teléfono: </strong> + 54 (11) 50328143 <br> 
+                  <strong>Teléfono: </strong> + 54 (11) 50328143 <br>
                     <strong>Interior:</strong> 0810-444-6387
                 </p>
-    
+
                  <div class="btn-group white">
                     <a class="btn btn-facebook" title="Facebook" target="_blank" href="#"><i class="fab fa-facebook-f  fa-fw"></i></a>
                     <a class="btn btn-instagram" title="Instagram" target="_blank" href="#"><i class="fab fa-instagram  fa-fw"></i></a>
@@ -704,13 +704,13 @@ $(document).ready(function() {
               </article>
             </aside>
           </div> <!-- row.// -->
-          <br> 
+          <br>
         </section>
         <section class="footer-bottom row border-top-white">
-          <div class="col-sm-4"> 
+          <div class="col-sm-4">
             <p class="text-white-50"> Hecho con <3 <br>  en Nordelta.</p>
           </div>
-          <div class="col-sm-4 payments-and-seals-content table"> 
+          <div class="col-sm-4 payments-and-seals-content table">
               <ul class="payment-flag-list">
                 <li><img src="https://static.netshoes.com.ar/0.0.387.9/netshoesar/svg/payment-flags/visa.svg" title="Visa" alt="Visa"></li>
                 <li><img src="https://static.netshoes.com.ar/0.0.387.9/netshoesar/svg/payment-flags/mastercard.svg" title="Mastercard" alt="Mastercard"></li>
@@ -719,7 +719,7 @@ $(document).ready(function() {
                 <li><img src="https://static.netshoes.com.ar/0.0.387.9/netshoesar/svg/payment-flags/pagofacil.svg" title="Pago Fácil" alt="Pago Fácil"></li>
                 <li><a href="http://www.ahora12.gob.ar/index.php" target="_blank" class="footer-stamp-AhoraPago"><img src="https://static.netshoes.com.ar/0.0.387.9/netshoesar/images/stamp-AhoraPago.svg" title="AHORA 3y6" alt="AHORA 3y6"></a></li>
               </ul></div>
-          
+
           <div class="col-sm-4">
             <p class="text-md-right text-white-50">
       Copyright &copy  <br>
@@ -735,7 +735,7 @@ $(document).ready(function() {
 <!-- partial -->
   <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
 <script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
-<script  src="./script.js"></script>
+<script  src="js/scriptSC.js"></script>
 
 
 
