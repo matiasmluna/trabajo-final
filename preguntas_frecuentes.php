@@ -221,7 +221,7 @@
       <h1 style="font-size: 36px">Preguntas frecuentes</h1>
         <br>
         <h2 class="text-body" style="font-size: 18px">¿Cuál es el horario de Atención al Cliente?</h2>
-          <p style="font-size: 14px">Nuestra Central de Atención al cliente funciona de lunes a sábados de 9:00hs a 17:00hs.</p>
+          <p style="font-size: 14px">Nuestro Centro de Atención al cliente funciona de lunes a sábados de 9:00hs a 17:00hs.</p>
           <br>
         <h2 class="text-body" style="font-size: 18px">¿Cuál es el plazo de entrega de mi pedido?</h2>
           <p style="font-size: 14px">El plazo de entrega es de 1 a 2 días para la zona de CABA y entre 2 a 3 días en el Gran Buenos Aires.</p>
