@@ -346,6 +346,9 @@ article:after,
   padding-left: 7px;
   padding-right: 7px; }
 
+.bg-secondary {
+  background-color: #000 !important; }
+
 .bg-white {
   background-color: #fff !important; }
 
