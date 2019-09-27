@@ -226,7 +226,7 @@
         <h2 class="text-body" style="font-size: 18px">¿Cuál es el plazo de entrega de mi pedido?</h2>
           <p style="font-size: 14px">El plazo de entrega es de 1 a 2 días para la zona de CABA y entre 2 a 3 días en el Gran Buenos Aires.</p>
           <br>
-        <h2 class="text-body" style="font-size: 18px">Si no hay nadie para recibir el pedido, ¿qué sucede?</h2>
+        <h2 class="text-body" style="font-size: 18px">Si no hay nadie para recibir el pedido, ¿Qué sucede?</h2>
           <p style="font-size: 14px">Serán realizados 2 intentos de entrega. Después de los 2 intentos, si la entrega continua sin ser efectiva, el pedido permanecerá en la sucursal del correo encargado del envío durante 5 días hábiles para su retiro. Pasado este plazo el pedido retornará a nuestro centro de distribución. </p>
           <br>
         <h2 class="text-body" style="font-size: 18px">Todavía no recibí mi pedido,¿qué hago?</h2>
