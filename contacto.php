@@ -160,7 +160,7 @@ $(document).ready(function() {
 
   <div class="container mt-5" class="nl-blurred" align="center">
     <h1>Formulario de contacto</h1>
-    <h4>Rellenalo con tu información y te contactaremos</h4>
+    <p>Rellenalo con tu información y te contactaremos</p>
   <div class="main clearfix">
     <form id="nl-form" class="nl-form">
       Hola<img src="https://media.tenor.com/images/3b388fe03da271d2674faf85eb7c3fcd/tenor.gif" width="50px">, me llamo <input type="text" value="" placeholder="Nombre y apellido" data-subline="Ejemplo: <em>Escribi tu nombre y tu apellido</em>"/>
