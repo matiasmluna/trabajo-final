@@ -46,19 +46,19 @@ Proyecto integrador
 	padding: 0;
 	outline: none;
   }
-
-
+  
+    
   .containerCard {
 	width: 280px;
 	height: 600px;
 	margin: 30px auto;
   }
-
+  
   .card {
 	border-radius: 25px;
 	box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
   }
-
+  
   .card-head {
 	position: relative;
 	height: 252px;
@@ -90,25 +90,25 @@ Proyecto integrador
 	/* IE6-9 fallback on horizontal gradient */
 	border-radius: 25px 25px 0 0;
   }
-
+  
   .card-logo {
 	width: 55px;
 	margin: 20px;
   }
-
+  
   .product-img {
 	position: absolute;
 	left: 0;
 	margin-top: -16px;
 	margin-left: 50px;
   }
-
+  
   .product-detail {
 	padding: 0 20px;
 	font-size: 11px;
 	color: #fff;
   }
-
+  
   .product-detail h2 {
 	font-size: 18px;
 	font-weight: 500;
@@ -116,7 +116,7 @@ Proyecto integrador
 	padding-bottom: 10px;
 	text-transform: uppercase;
   }
-
+  
   .back-text {
 	display: inline-block;
 	font-size: 125px;
@@ -125,13 +125,13 @@ Proyecto integrador
 	margin-top: -12px;
 	opacity: 0.1;
   }
-
+  
   .card-body {
 	height: 255px;
 	background: #fff;
 	border-radius: 0 0 25px 25px;
   }
-
+  
   .product-title {
 	padding: 20px 20px 5px 20px;
 	display: block;
@@ -140,12 +140,12 @@ Proyecto integrador
 	letter-spacing: 1px;
 	text-transform: uppercase;
   }
-
+  
   .product-title b {
 	font-weight: 900;
 	letter-spacing: 0px;
   }
-
+  
   .badge {
 	position: relative;
 	font-size: 10px;
@@ -157,7 +157,7 @@ Proyecto integrador
 	top: -2px;
 	margin-left: 5px;
   }
-
+  
   .product-caption {
 	display: block;
 	padding: 0 20px;
@@ -165,16 +165,16 @@ Proyecto integrador
 	font-weight: 400;
 	text-transform: uppercase;
   }
-
+  
   .product-rating {
 	padding: 0 20px;
 	font-size: 11px;
   }
-
+  
   .product-rating i.grey {
 	color: #acacab;
   }
-
+  
   .product-size h4 {
     font-size: 15px;
     padding: 0 21px;
@@ -183,18 +183,18 @@ Proyecto integrador
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-
+  
 .ul-size {
     margin-left: 15px;
     padding-bottom: 45px;
 }
-
+  
   .ul-size li {
 	list-style: none;
 	float: left;
 	margin-right: 20px;
   }
-
+  
   .ul-size li a {
 	display: inline-block;
 	text-decoration: none;
@@ -206,19 +206,19 @@ Proyecto integrador
 	line-height: 23px;
 	color: #000;
   }
-
+  
   .ul-size li a.active {
 	background: #f35e3d;
 	color: #fff;
   }
-
+  
   .product-size:before,
   .product-size:after {
 	content: '';
 	display: block;
 	clear: both;
   }
-
+  
   .product-color h4 {
 	font-size: 11px;
 	padding: 0 21px;
@@ -226,36 +226,36 @@ Proyecto integrador
 	padding-bottom: 20px;
 	text-transform: uppercase;
   }
-
+  
   .ul-color {
 	margin-left: 27px;
   }
-
+  
   .ul-color li {
 	list-style: none;
 	float: left;
 	margin-right: 20px;
   }
-
+  
   .ul-color li a {
 	display: inline-block;
 	width: 16px;
 	height: 16px;
 	border-radius: 100%;
   }
-
+  
   .ul-color li a.orange {
 	background: #f35e3d;
   }
-
+  
   .ul-color li a.green {
 	background: #11e95b;
   }
-
+  
   .ul-color li a.yellow {
 	background: #ffd414;
   }
-
+  
   .ul-color li a.active:after {
 	position: absolute;
 	content: '';
@@ -267,7 +267,7 @@ Proyecto integrador
 	margin-left: -5px;
 	margin-top: -5px;
   }
-
+  
   .product-price {
     position: absolute;
     background: #f35e3d;
@@ -282,7 +282,7 @@ Proyecto integrador
     margin-left: 43%;
     box-shadow: -10px 20px 15px -10px rgba(233, 114, 17, 0.3);
 }
-
+  
   .product-price b {
 	margin-left: 5px;
   }
@@ -301,11 +301,11 @@ Proyecto integrador
     margin-left: 43%;
     box-shadow: -10px 20px 15px -10px rgba(80, 80, 80, 0.3);
 }
-
+  
   .product-price b {
 	margin-left: 5px;
   }
-
+  
 
   .payment-flag-list li{
     display: inline;
@@ -316,7 +316,7 @@ Proyecto integrador
 
 	.containerCard { transition: all .2s ease-in-out; }
 	.containerCard:hover { transform: scale(1.1); }
-
+  
 	.emptyspace{
 		margin-top: 5%;
 		margin-bottom: 1%;
@@ -331,7 +331,7 @@ Proyecto integrador
 	  @media screen and (min-width: 0px) and (max-width: 520px) {
 		.marginMobile {    margin-top: 10%;  }
 	  }
-
+	
 	@media screen and (min-width: 0px) and (max-width: 720px) {
 		.product-img {
 			position: absolute;
@@ -353,11 +353,11 @@ Proyecto integrador
 		}
 		.nl-ti-text ul li.nl-ti-input input {
 			width: 250px!important;
-		}
+		}	
 		.nl-field.nl-field-open ul {
 			margin-left: 0px;
 			margin-right:0px;
-		}
+		}	
 	}
 
 	.suscribeteBoton{
@@ -368,5 +368,5 @@ Proyecto integrador
 	/* Productos */
 	.img-big-wrap video{
 		width: 100%;
-		height: 450px!important;
+		height: 450px;
 	}

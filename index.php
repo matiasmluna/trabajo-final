@@ -541,7 +541,7 @@ $(document).ready(function() {
              <div class="card">
                <div class="card-head">
                  <img src="https://s5.postimg.cc/wy79025cz/nike_Logo_White.png" alt="logo" class="card-logo">
-                 <img src="images/nike2.png" alt="Shoe" class="product-img">
+                 <a href="./nike.php"><img src="images/nike2.png" alt="botin nike" class="product-img"></a>
                  <div class="product-detail">
                    <h2>Botines Nike</h2><p class="fadetext">NIKE</p><p class="fadetext">NIKE</p><p class="fadetext">NIKE</p>
                  </div>
@@ -549,9 +549,10 @@ $(document).ready(function() {
                          ´19
                        </span>
                </div>
+
                <div class="card-body">
                  <div class="product-desc">
-                   <span class="product-title">
+                   <a href="./nike.php"><span class="product-title">
                            MER<b>CURIAL</b>
                            <span class="badge">
                              Tendencia
@@ -566,7 +567,7 @@ $(document).ready(function() {
                            <i class="fa fa-star"></i>
                            <i class="fa fa-star"></i>
                            <i class="fa fa-star"></i>
-                         </span>
+                         </span></a>
                  </div>
                  <div class="product-properties">
                    <span class="product-size">
@@ -590,7 +591,7 @@ $(document).ready(function() {
 
 
 
-         </div> </div>
+         </div> </div></a>
                 </div>
               </section>
      <!-- container .//  -->
@@ -677,7 +678,7 @@ $(document).ready(function() {
                 <li> <a href="#"> Entregas </a></li>
                 <li> <a href="#"> Pagos </a></li>
                 <li> <a href="#"> Cambios </a></li>
-                <li> <a href="#"> Mi Pedidos </a></li>
+                <li> <a href="./contacto.php"> Contacto </a></li>
               </ul>
             </aside>
             <aside class="col-sm-3  col-md-3 white marginMobile">
