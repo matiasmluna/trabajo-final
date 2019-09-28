@@ -175,7 +175,7 @@
 
   </header> <!-- section-header.// -->
 
-  <section style="padding: 4px;margin: 10px ">
+  <section style="padding: 4px;margin: 10px;margin-left: 14px ">
       <br>
       <h1 style="font-size: 36px">Preguntas frecuentes</h1>
         <br>

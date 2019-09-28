@@ -96,12 +96,13 @@ Proyecto integrador
 	margin: 20px;
   }
 
-  .product-img {
-	position: absolute;
-	left: 0;
-	margin-top: -16px;
-	margin-left: 50px;
-  }
+	.product-img {
+	    position: absolute;
+	    left: 0;
+	    margin-top: 46px;
+	    margin-left: 50px;
+	    width: 300px;
+	}
 
   .product-detail {
 	padding: 0 20px;

@@ -735,7 +735,7 @@
                   <li> <a href="#"> Entregas </a></li>
                   <li> <a href="#"> Pagos </a></li>
                   <li> <a href="#"> Cambios </a></li>
-                  <li> <a href="#"> Mi Pedidos </a></li>
+                  <li> <a href="contacto.php"> Contactos </a></li>
                 </ul>
               </aside>
               <aside class="col-sm-3  col-md-3 white marginMobile">
