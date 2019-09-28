@@ -365,6 +365,10 @@ Proyecto integrador
 		min-width: 115px!important;
 	}
 
+	/* Opciones mobiles */
+	@media screen and (min-width: 520px) and (max-width: 900px) {
+		.hidetable {    display: none;  }
+	  }
 
 	/* Productos */
 	.img-big-wrap video{

@@ -144,7 +144,7 @@
                       </div> <!--  menu .// -->
                     </div>  <!-- widget-header .// -->
                   </div> <!-- col.// -->
-                <div class="col-auto hideonmobile">
+                <div class="col-auto hideonmobile hidetable">
                   <a href="#" class="widget-header">
                     <div class="icontext">
                       <div class="icon-wrap"><i class="text-dark icon-sm fa fa-shopping-cart"></i></div>
@@ -222,12 +222,12 @@
 
   <div class="emptyspace">
 
-  <div class="hideonmobile container mt-25 mb-5">
+  <div class="hideonmobile hidetable container mt-25 mb-5">
     <!-- partial:index.partial.html -->
     <h4 class="gl-text-center color-theme-black___1htzw">¿QUÉ TIPO DE JUGADOR ERES?</h4>
   </div>
 
-  <div class="hideonmobile parallax">
+  <div class="hideonmobile hidetable parallax">
 
     <!-- background parallax layer -->
     <div class="parallax__layer parallax__layer--bg">
@@ -282,7 +282,7 @@
     <!-- ========================= ADIDAS ========================= -->
 
           <div class="row">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                <div class="containerCard">
                 <div class="card">
                     <div class="card-head2">
@@ -337,7 +337,7 @@
               </div>
             </div>
 
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
               <div class="containerCard">
                <div class="card">
                  <div class="card-head2">
@@ -392,7 +392,7 @@
               </div>
             </div>
 
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
               <div class="containerCard">
                 <div class="card">
                   <div class="card-head2">
@@ -451,7 +451,7 @@
     <!-- ========================= NIKE ========================= -->
           <div class="row">
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4">
                    <div class="containerCard">
                       <div class="card">
                           <div class="card-head">
@@ -506,7 +506,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4">
                   <div class="containerCard">
                    <div class="card">
                      <div class="card-head">
@@ -560,7 +560,7 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4">
                 <div class="containerCard">
                  <div class="card">
                    <div class="card-head">
