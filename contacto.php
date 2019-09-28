@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Tienda de Futbol - Contacto</title>
+  <title>Tienda de Fútbol - Contacto</title>
 <link rel="shortcut icon" type="image/x-icon" href="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

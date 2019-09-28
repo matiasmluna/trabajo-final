@@ -6,7 +6,7 @@
     <!-- <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <meta charset="UTF-8">
-    <title>Tienda de Futbol - Aprovecha las ofertas</title>
+    <title>Tienda de Fútbol - Aprovecha las ofertas</title>
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" type="image/x-icon" href="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
