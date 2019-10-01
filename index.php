@@ -145,11 +145,12 @@
                     </div>  <!-- widget-header .// -->
                   </div> <!-- col.// -->
                 <div class="col-auto hideonmobile hidetable">
-                  <a href="#" class="widget-header">
+                  <a href="carrito.php" class="widget-header">
                     <div class="icontext">
                       <div class="icon-wrap"><i class="text-dark icon-sm fa fa-shopping-cart"></i></div>
                       <div class="text-wrap text-dark">
-                        Protección <br> De Compra
+                          Protección <br>
+                          De Compra
                       </div>
                     </div>
                   </a>

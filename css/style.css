@@ -185,6 +185,10 @@ Proyecto integrador
     margin-bottom: 10px;
 }
 
+#imagen-carrito .img-sm {
+	width: 100px;
+}
+
 .ul-size {
     margin-left: 15px;
     padding-bottom: 45px;

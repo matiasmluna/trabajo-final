@@ -55,7 +55,7 @@
   </head>
   <body>
 
-  <header class="section-header">
+    <header class="section-header">
 
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
@@ -154,12 +154,13 @@
                         </div> <!--  menu .// -->
                       </div>  <!-- widget-header .// -->
                     </div> <!-- col.// -->
-                  <div class="col-auto hideonmobile">
-                    <a href="#" class="widget-header">
+                  <div class="col-auto hideonmobile hidetable">
+                    <a href="carrito.php" class="widget-header">
                       <div class="icontext">
                         <div class="icon-wrap"><i class="text-dark icon-sm fa fa-shopping-cart"></i></div>
                         <div class="text-wrap text-dark">
-                          Protección <br> De Compra
+                            Protección <br>
+                            De Compra
                         </div>
                       </div>
                     </a>
@@ -183,7 +184,7 @@
 
         </section> <!-- fin del header .// -->
 
-  </header> <!-- section-header.// -->
+    </header> <!-- section-header.// -->
 
   <section>
       <div class="container">

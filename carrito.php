@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -176,23 +176,138 @@
 
   </header> <!-- section-header.// -->
 
-  <section style="padding: 4px;margin: 10px;margin-left: 14px ">
-      <br>
-      <h1 style="font-size: 36px">Preguntas frecuentes</h1>
-        <br>
-        <h2 class="text-body mb-0" style="font-size: 18px">¿Cuál es el horario de Atención al Cliente?</h2>
-          <p style="font-size: 14px">Nuestro Centro de Atención al cliente funciona de lunes a sábados de 9:00hs a 17:00hs.</p>
-          <br>
-        <h2 class="text-body mb-0" style="font-size: 18px">¿Cuál es el plazo de entrega de mi pedido?</h2>
-          <p style="font-size: 14px">El plazo de entrega es de 1 a 2 días para la zona de CABA y entre 2 a 3 días en el Gran Buenos Aires.</p>
-          <br>
-        <h2 class="text-body mb-0" style="font-size: 18px">Si no hay nadie para recibir el pedido, ¿qué sucede?</h2>
-          <p style="font-size: 14px">Serán realizados 2 intentos de entrega. Después de los 2 intentos, si la entrega continua sin ser efectiva, el pedido permanecerá en la sucursal del correo encargado del envío durante 5 días hábiles para su retiro. Pasado este plazo el pedido retornará a nuestro centro de distribución. </p>
-          <br>
-        <h2 class="text-body mb-0" style="font-size: 18px">Tengo otro tipo de consulta,¿qué hago?</h2>
-          <p style="font-size: 14px">Deberá contactarse con sac@sportlife.com.ar</p>
-        <h2 class="text-body mb-0" style="font-size: 18px"></h2>
-    </section>
+  <div class="card">
+    <table class="table table-hover shopping-cart-wrap">
+      <thead class="text-muted">
+        <tr>
+          <th scope="col">Productos</th>
+          <th scope="col" width="120">Cantidad</th>
+          <th scope="col" width="120">Precio</th>
+          <th scope="col" width="200" class="text-right">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          	<td>
+              <figure class="media">
+              	 <div id="imagen-carrito" class="img-wrap">
+                   <img src="images/adidas2.png" class="img-thumbnail img-sm">
+                 </div>
+              	 <figcaption class="media-body">
+                		<h6 class="title text-truncate">BOTINES ADIDAS
+                    </h6>
+                		<dl class="dlist-inline small">
+                		  <dt>Talle:</dt>
+                		  <dd>42</dd>
+                		</dl>
+                		<dl class="dlist-inline small">
+                		  <dt>Color: </dt>
+                		  <dd>Rosa</dd>
+                		</dl>
+              	  </figcaption>
+              </figure>
+          	</td>
+          	<td>
+          		<select class="form-control">
+          			<option>1</option>
+          			<option>2</option>
+          			<option>3</option>
+          			<option>4</option>
+          		</select>
+          	</td>
+          	<td>
+          		<div class="price-wrap">
+          			<var class="price">$5,490.00</var>
+          		</div> <!-- price-wrap .// -->
+          	</td>
+          	<td class="text-right">
+          	<a title="" href="" class="btn btn-outline-success" data-toggle="tooltip" data-original-title="Save to Wishlist"> <i class="fa fa-heart"></i></a>
+          	<a href="" class="btn btn-outline-danger"> × Eliminar</a>
+          	</td>
+        </tr>
+
+        <tr>
+          	<td>
+              <figure class="media">
+              	 <div id="imagen-carrito" class="img-wrap">
+                   <img src="images/adidas2.png" class="img-thumbnail img-sm">
+                 </div>
+              	 <figcaption class="media-body">
+                		<h6 class="title text-truncate">BOTINES ADIDAS
+                    </h6>
+                		<dl class="dlist-inline small">
+                		  <dt>Talle:</dt>
+                		  <dd>42</dd>
+                		</dl>
+                		<dl class="dlist-inline small">
+                		  <dt>Color: </dt>
+                		  <dd>Rosa</dd>
+                		</dl>
+              	  </figcaption>
+              </figure>
+          	</td>
+          	<td>
+          		<select class="form-control">
+          			<option>1</option>
+          			<option>2</option>
+          			<option>3</option>
+          			<option>4</option>
+          		</select>
+          	</td>
+          	<td>
+          		<div class="price-wrap">
+          			<var class="price">$5,490.00</var>
+          		</div> <!-- price-wrap .// -->
+          	</td>
+          	<td class="text-right">
+          	<a title="" href="" class="btn btn-outline-success" data-toggle="tooltip" data-original-title="Save to Wishlist"> <i class="fa fa-heart"></i></a>
+          	<a href="" class="btn btn-outline-danger"> × Eliminar</a>
+          	</td>
+        </tr>
+
+        <tr>
+          	<td>
+              <figure class="media">
+              	 <div id="imagen-carrito" class="img-wrap">
+                   <img src="images/adidas2.png" class="img-thumbnail img-sm">
+                 </div>
+              	 <figcaption class="media-body">
+                		<h6 class="title text-truncate">BOTINES ADIDAS
+                    </h6>
+                		<dl class="dlist-inline small">
+                		  <dt>Talle:</dt>
+                		  <dd>42</dd>
+                		</dl>
+                		<dl class="dlist-inline small">
+                		  <dt>Color: </dt>
+                		  <dd>Rosa</dd>
+                		</dl>
+              	  </figcaption>
+              </figure>
+          	</td>
+          	<td>
+          		<select class="form-control">
+          			<option>1</option>
+          			<option>2</option>
+          			<option>3</option>
+          			<option>4</option>
+          		</select>
+          	</td>
+          	<td>
+          		<div class="price-wrap">
+          			<var class="price">$5,490.00</var>
+          		</div> <!-- price-wrap .// -->
+          	</td>
+          	<td class="text-right">
+          	<a title="" href="" class="btn btn-outline-success" data-toggle="tooltip" data-original-title="Save to Wishlist"> <i class="fa fa-heart"></i></a>
+          	<a href="" class="btn btn-outline-danger"> × Eliminar</a>
+          	</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div> <!-- card.// -->
 
   <footer class="section-footer bg-secondary">
         <div class="container">
@@ -275,6 +390,6 @@
   <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
   <script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
   <script  src="js/scriptSC.js"></script>
-</body>
 
+</body>
 </html>
