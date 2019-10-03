@@ -175,7 +175,8 @@
       </section> <!-- fin del header .// -->
 
   </header> <!-- section-header.// -->
-
+<div class="emptyspace"></div>
+<div class="container">
   <div class="card">
     <table class="table table-hover shopping-cart-wrap">
       <thead class="text-muted">
@@ -308,6 +309,8 @@
       </tbody>
     </table>
   </div> <!-- card.// -->
+  </div>
+  <div class="emptyspace"></div>
 
   <footer class="section-footer bg-secondary">
         <div class="container">
