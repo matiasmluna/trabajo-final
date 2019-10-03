@@ -53,8 +53,8 @@
 
     <header class="section-header">
 
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light" style="height: 68px;">
+          <div class="container" style="padding-top: 0px;padding-bottom: 0px;">
               <a class="navbar-brand" href="#">
                 <img class="logo" src="images/logos/logo.png" alt="alibaba style e-commerce html template file" title="alibaba e-commerce html css theme">
               </a>
@@ -88,8 +88,8 @@
           </div>
         </nav>
 
-        <section class="header-main shadow-sm">
-          <div class="container">
+        <section class="header-main shadow-sm"  style="height: 82px;padding-left: 16px;padding-right: 16px;width: 1381px;">
+          <div class="container" style="padding-top: 0px;padding-bottom: 0px;height: 50px;">
             <div class="row-sm align-items-center">
               <div class="col-lg-4-24 col-sm-3">
                 <div class="category-wrap dropdown py-1">
