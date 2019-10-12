@@ -183,7 +183,7 @@
     </header> <!-- section-header.// -->
 
     <form class="formulario" action="index.html" method="post">
-      <h1 style="font-size: 40px">Registrarte</h1>
+      <h1 style="font-size: 40px">Registrate</h1>
         <div class="contenedor">
           <div class="input-contenedor">
             <i class="fas fa-user icon"></i>
