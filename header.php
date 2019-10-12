@@ -1,4 +1,9 @@
-<head>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
     <meta charset="UTF-8">
     <title>Tienda de Futbol - Aprovecha las ofertas</title>
     <meta name="viewport" content="width=device-width">
@@ -39,3 +44,7 @@
   </script>
 
 </head>
+<body>
+
+</body>
+</html>
