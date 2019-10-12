@@ -2,7 +2,9 @@
 	// Incluimos el controlador del registro-login
 	// De esta manera tengo el scope a la funciones que necesito
 	require_once 'login-controller.php';
-
+  $pageTitle = 'Iniciar Sesión';
+	require_once 'header.php';
+  require_once 'navbar.php';
 	// Si está logueda la persona la redirijo al profile
 	if ( isLogged() ) {
 		header('location: perfildelusuario.php');
@@ -43,7 +45,7 @@
 
   <body>
 
-    
+
 
   <section>
       <div class="container">
