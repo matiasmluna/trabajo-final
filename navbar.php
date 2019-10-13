@@ -25,13 +25,25 @@
               <!-- <li><a href="#" class="nav-link " >   Tiendas oficiales </a></li> -->
               <li><a href="preguntas_frecuentes.php" class="nav-link " >   F.A.Q. </a></li>
             </ul>
-            <ul class="navbar-nav">
-              <!-- <li class="nav-item"><a href="#" class="nav-link" > Android </a></li>
-              <img src="https://candymanvendingservice.com/wp-content/uploads/2016/11/icons-apple-android.png" width="50px" height="25px">
-              <li class="nav-item"><a href="http://bootstrap-ecommerce.com/" class="nav-link" > iOS  </a></li> -->
-              <li class="nav-item"><a href="perfildelusuario.php" class="nav-link" > Mi cuenta </a></li>
-            </ul> <!-- barra de navegacion.// -->
-          </div> <!-- collapse.// -->
+
+            <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
+      				<!-- Preguntamos si NO está logueado el usuario para mostrar los enlaces Register y Login -->
+      				<?php if ( !isLogged() ) : ?>
+      					<!-- <li class="nav-item"><a class="nav-link" href="registro.php">Registrate</a></li> -->
+      					<li class="nav-item"><a class="nav-link" href="login.php">Iniciar sesión</a></li>
+      				<?php else: ?>
+      					<li class="nav-item dropdown">
+      						<a class="nav-link dropdown-toggle" href="#" id="dropNavBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      							<img src="data/avatars/<?= $_SESSION['userLoged']['avatar']; ?>" width="40" style="border-radius: 50%; background-color: #ffffff; padding: 5px;">
+      							<?= $_SESSION['userLoged']['name'] ?>
+      						</a>
+      						<div class="dropdown-menu" aria-labelledby="dropNavBar">
+      							<a class="dropdown-item" href="profile.php">Mi perfil</a>
+      							<a class="dropdown-item" href="logout.php">Salir</a>
+      						</div>
+      					</li>
+      				<?php endif ?>
+			      </ul>
       </div>
     </nav>
 

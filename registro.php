@@ -19,7 +19,6 @@
 	// Variables para persitir
 	$name = '';
 	$email = '';
-	$countryFromPost = '';
 
 	if ($_POST) {
 		// Las variables de persistencia les asigno el valor que vino de $_POST
@@ -60,7 +59,7 @@
   <body>
 
     <div class="contenedor">
-      <form class="formulario" action="registro.php" method="POST" enctype="multipart/form-data">
+      <form method="POST" enctype="multipart/form-data">
         <h1 style="font-size: 40px">Registrate</h1>
 						<div class="input-contenedor">
 							<div class="form-group">

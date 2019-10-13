@@ -5,8 +5,8 @@
 
 	// Definimos las constantes que necesitamos en nuestro proyecto, de esta manera puedo usar las mismas dentro de las funciones sin tener que usar una variable global o pasarla por parámetro
 	define('ALLOWED_IMAGE_FORMATS', ['jpg', 'jpeg', 'png', 'gif']);
-	define('IMAGE_PATH', dirname(__FILE__) . '/data/avatars/');
-	define('USERS_JSON_PATH', dirname(__FILE__) . '/data/users.json');
+	define('IMAGE_PATH', dirname(__FILE__) . 'data/avatars/');
+	define('USERS_JSON_PATH', dirname(__FILE__) . 'data/users.json');
 
 
 	// Si está la cookie almacenada y si NO está logueda la persona:
@@ -294,7 +294,6 @@
 		$theUser['name'] = $_POST['name'];
 		$theUser['email'] = $_SESSION['userLoged']['email']; // El email siempre será el mismo
 		$theUser['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
-		$theUser['country'] = $_POST['country'];
 		$theUser['avatar'] = $_POST['avatar'];
 
 		// Guardo en la misma posición al usuario actualizado
