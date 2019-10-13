@@ -3,8 +3,6 @@
 	// De esta manera tengo el scope a la funciones que necesito
 	require_once 'login-controller.php';
   $pageTitle = 'Iniciar Sesión';
-	require_once 'header.php';
-  require_once 'navbar.php';
 	// Si está logueda la persona la redirijo al profile
 	if ( isLogged() ) {
 		header('location: perfildelusuario.php');
@@ -37,6 +35,10 @@
 			login($userToLogin);
 		}
 	}
+
+	require_once 'navbar.php';
+	require_once 'header.php';
+
 ?>
 
 <!doctype html>

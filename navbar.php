@@ -23,7 +23,7 @@
               <li><a href="index.php" class="nav-link " >   Inicio </a></li>
               <li><a href="registro.php" class="nav-link " >   Registrate gratis </a></li>
               <!-- <li><a href="#" class="nav-link " >   Tiendas oficiales </a></li> -->
-              <li><a href="preguntas_frecuentes.php" class="nav-link " >   Preguntas frecuentes </a></li>
+              <li><a href="preguntas_frecuentes.php" class="nav-link " >   F.A.Q. </a></li>
             </ul>
             <ul class="navbar-nav">
               <!-- <li class="nav-item"><a href="#" class="nav-link" > Android </a></li>

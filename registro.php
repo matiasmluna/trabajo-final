@@ -1,3 +1,60 @@
+<?php
+  require_once("funciones/funciones.php");
+
+  $contraseña = $_POST["contraseña"];
+  $contraseñaverificacion = $_POST["contraseñaverificacion"];
+
+  // Creamos esta variable con Array vacío para que no de error al entrar por GET
+  $errorsInRegister = [];
+
+  // Genero variables default para persistencia.
+  $nombrePredeterminado = "";
+  $telefonoPredeterminado = "";
+  $emailPredeterminado = "";
+
+  //Verifico si vengo por Post.
+  if ($_POST){
+  // Validar.
+  $errores = validarRegistracion($_POST);
+
+  //Si no hay errores:
+  if(empty($errores)){
+        // Guardo la imagen y obtengo el nombre aleatorio creado
+        $imgName = saveImage();
+
+        // // Creo en $_POST una posición "avatar" para guardar el nombre de la imagen
+        // $_POST["imagenDePerfil"] = $imgName;
+        //
+        // $theUser = $_POST["nombre"];
+        //
+        // // Guardo al usuario en el archivo JSON, y me devuelve al usuario que guardó en array
+        // $theUser = saveUser();
+        //
+        // // Al momento en que se registar vamos a mantener la sesión abierta
+        // setcookie("userLoged", $theUser['email'], time() + 3000);
+        //
+        // // Logueo al usuario
+        // login($theUser);
+        // //Reenviarlo a la pág. de éxito.
+        // header("Location:registro.php");exit;
+  }
+
+  //Armar la persistencia de los datos ingresados.
+    if(isset($errores["nombre"]) == false){
+        $nombrePredeterminado = $_POST["nombre"];
+      }
+
+      $telefonoPredeterminado = $_POST["telefono"];
+
+      if (isset($errores["email"]) == false) {
+        $emailPredeterminado = $_POST["email"];
+      }
+
+}
+
+
+  ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -182,23 +239,78 @@
 
     </header> <!-- section-header.// -->
 
-    <form class="formulario" action="index.html" method="post">
+    <form class="formulario" action="registro.php" method="post" enctype="multipart/form-data">
       <h1 style="font-size: 40px">Registrate</h1>
         <div class="contenedor">
+
           <div class="input-contenedor">
-            <i class="fas fa-user icon"></i>
-            <input type="text" placeholder="Nombre completo" name="" value="">
-          </div>
+              <i class="fas fa-user icon"></i>
+              <input type="text" placeholder="Nombre completo" name="nombre" value="<?=$nombrePredeterminado?>">
+            </div>
+             <?php if($_POST && isset($errores["nombre"])){ ?>
+               <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
+               <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["nombre"] . "</h3>";
+               }?>
+               </div>
 
           <div class="input-contenedor">
             <i class="fas fa-envelope icon"></i>
-            <input type="text" placeholder="Email" name="" value="">
-          </div>
+            <input type="text" placeholder="Email" name="email" value="<?= $emailPredeterminado ?>">
+            </div>
+            <?php if($_POST && isset($errores["email"])){ ?>
+            <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
+            <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["email"] . "</h3>";
+            }?>
+            </div>
+
+          <div class="input-contenedor">
+            <i class="fas fa-phone icon"></i>
+            <input type="text" placeholder="Teléfono" name="telefono" value="<?= $telefonoPredeterminado ?>">
+            </div>
+            <?php if($_POST && isset($errores["telefono"])){ ?>
+            <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
+            <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["telefono"] . "</h3>";
+            }?>
+            </div>
 
           <div class="input-contenedor">
             <i class="fas fa-key icon"></i>
-            <input type="password" placeholder="Contraseña" name="" value="">
-          </div>
+            <input type="password" placeholder="Contraseña" name="contraseña" value="">
+            </div>
+            <?php if($_POST && isset($errores["contraseña"])){ ?>
+            <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
+            <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["contraseña"] . "</h3>";
+            }?>
+            </div>
+
+          <div class="input-contenedor">
+            <i class="fas fa-key icon"></i>
+            <input type="password" placeholder="Verificar contraseña" name="contraseñaverificacion" value="">
+            </div>
+            <?php if($_POST && isset($errores["contraseñaverificacion"])){ ?>
+            <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
+            <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["contraseñaverificacion"] . "</h3>";
+            }?>
+
+            </div>
+            <?php if($contraseña != $contraseñaverificacion) { ?>
+              <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
+              <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["contraseña_equivalentes"] . "</h3>";
+              }?>
+            </div>
+
+          <div class="input-contenedor">
+      				<div class="form-group">
+      					<div class="custom-file">
+      						<input type="file" name="imagenDePerfil" class="custom-file-input">
+      						<label class="custom-file-label">Cargá tu foto de perfil</label>
+      					</div>
+                <!-- <div class="alert alert-danger">
+
+                </div> -->
+      				 </div>
+      			  </div>
+
           <input type="submit" name="" value="Registrarte" class="button">
           <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
           <p>¿Ya tienes una cuenta?<a class="link" href="login.php"> Iniciar Sesión.</a></p>
