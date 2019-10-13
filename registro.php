@@ -1,269 +1,149 @@
 <?php
-  require_once("funciones/funciones.php");
+	// Incluimos el controlador del registro-login
+	// De esta manera tengo el scope a la funciones que necesito
+	require_once 'funciones/funciones.php';
 
-  $contraseña = $_POST["contraseña"];
-  $contraseñaverificacion = $_POST["contraseñaverificacion"];
+	// Si está logueda la persona la redirijo al profile
+	if ( isLogged() ) {
+		header('location: perfildelusuario.php');
+		exit;
+	}
 
-  // Creamos esta variable con Array vacío para que no de error al entrar por GET
-  $errorsInRegister = [];
-
-  // Genero variables default para persistencia.
-  $nombrePredeterminado = "";
-  $telefonoPredeterminado = "";
-  $emailPredeterminado = "";
-
-  //Verifico si vengo por Post.
-  if ($_POST){
-  // Validar.
-  $errores = validarRegistracion($_POST);
-
-  //Si no hay errores:
-  if(empty($errores)){
-        // Guardo la imagen y obtengo el nombre aleatorio creado
-        $imgName = saveImage();
-
-        // // Creo en $_POST una posición "avatar" para guardar el nombre de la imagen
-        // $_POST["imagenDePerfil"] = $imgName;
-        //
-        // $theUser = $_POST["nombre"];
-        //
-        // // Guardo al usuario en el archivo JSON, y me devuelve al usuario que guardó en array
-        // $theUser = saveUser();
-        //
-        // // Al momento en que se registar vamos a mantener la sesión abierta
-        // setcookie("userLoged", $theUser['email'], time() + 3000);
-        //
-        // // Logueo al usuario
-        // login($theUser);
-        // //Reenviarlo a la pág. de éxito.
-        // header("Location:registro.php");exit;
-  }
-
-  //Armar la persistencia de los datos ingresados.
-    if(isset($errores["nombre"]) == false){
-        $nombrePredeterminado = $_POST["nombre"];
-      }
-
-      $telefonoPredeterminado = $_POST["telefono"];
-
-      if (isset($errores["email"]) == false) {
-        $emailPredeterminado = $_POST["email"];
-      }
-
-}
+	$pageTitle = 'Register';
+	require_once 'header.php';
 
 
-  ?>
+	// Creamos esta variable con Array vacío para que no de error al entrar por GET
+	$errorsInRegister = [];
+
+	// Variables para persitir
+	$name = '';
+	$email = '';
+	$countryFromPost = '';
+
+	if ($_POST) {
+		// Las variables de persistencia les asigno el valor que vino de $_POST
+		$name = trim($_POST['name']);
+		$email = trim($_POST['email']);
+
+		// La función registerValidate() nos retorna el array de errores que almacenamos en esta variable
+		$errorsInRegister = registerValidate();
+
+		// Si no hay errores en el registro
+		// Cuando no hay errores guardo la imagen y los datos
+		// if ( count($errorsInRegister) == 0 ) {
+		if ( !$errorsInRegister ) {
+
+			// Guardo la imagen y obtengo el nombre aleatorio creado
+			$imgName = saveImage();
+
+			// Creo en $_POST una posición "avatar" para guardar el nombre de la imagen
+			$_POST["imagenDePerfil"] = $imgName;
+
+			// Guardo al usuario en el archivo JSON, y me devuelve al usuario que guardó en array
+			$theUser = saveUser();
+
+			// Al momento en que se registar vamos a mantener la sesión abierta
+			setcookie('userLoged', $theUser['email'], time() + 3000);
+
+			// Logueo al usuario
+			login($theUser);
+		}
+	}
+
+	require_once 'navbar.php';
+?>
 
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <!-- Required meta tags -->
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
-
-    <meta charset="utf-8">
-    <title>Tienda de Fútbol - Aprovecha las ofertas</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" type="image/x-icon" href="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- jQuery -->
-    <script src="js/jquery-2.0.0.min.js" type="text/javascript"></script>
-
-    <!-- Bootstrap4-->
-    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
-
-    <!-- Font awesome 5 -->
-    <link href="fonts/fontawesome/css/fontawesome-all.min.css" type="text/css" rel="stylesheet">
-
-    <!-- plugin: owl carousel  -->
-    <link href="plugins/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="plugins/owlcarousel/assets/owl.theme.default.css" rel="stylesheet">
-    <script src="plugins/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- css -->
-    <link href="css/ui.css" rel="stylesheet" type="text/css"/>
-    <link href="css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)" />
-    <link href="css/style.css" rel="stylesheet"/>
-    <link href="css/glass-adidas.css" rel="stylesheet"/>
-    <link href="css/flick.css" rel="stylesheet"/>
-
-    <!-- javascript -->
-    <script src="js/script.js" type="text/javascript"></script>
-    <script src="js/flick.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    // jquery ready start
-    $(document).ready(function() {
-      // jQuery code
-    });
-    // jquery end
-    </script>
-
-  </head>
-
   <body>
 
-    <header class="section-header">
+    <div class="contenedor">
+      <form class="formulario" action="registro.php" method="POST" enctype="multipart/form-data">
+        <h1 style="font-size: 40px">Registrate</h1>
+						<div class="input-contenedor">
+							<div class="form-group">
+                <i class="fas fa-user icon"></i>
+								<label><b>Nombre completo:</b></label>
+								<input
+									type="text"
+									name="name"
+									class="form-control <?= isset($errorsInRegister['name']) ? 'is-invalid' : null ?>"
+									value="<?= $name; ?>"
+								>
+								<div class="invalid-feedback">
+          				<?= isset($errorsInRegister['name']) ? $errorsInRegister['name'] : null; ?>
+        				</div>
+							</div>
+						</div>
+						<div class="input-contenedor">
+							<div class="form-group"
+                <i class="fas fa-envelope icon"></i>
+								<label><b>Correo electrónico:</b></label>
+								<input
+									type="text"
+									name="email"
+									class="form-control <?= isset($errorsInRegister['email']) ? 'is-invalid' : null ?>"
+									value="<?= $email; ?>"
+								>
+								<div class="invalid-feedback">
+          				<?= isset($errorsInRegister['email']) ? $errorsInRegister['email'] : null; ?>
+        				</div>
+							</div>
+						</div>
+						<div class="input-contenedor">
+						   <div class="form-group">
+                <i class="fas fa-key icon"></i>
+								<label><b>Password:</b></label>
+								<input
+									type="password"
+									name="password"
+									class="form-control <?= isset($errorsInRegister['password']) ? 'is-invalid' : null ?>"
+								>
+								<div class="invalid-feedback">
+          				<?= isset($errorsInRegister['password']) ? $errorsInRegister['password'] : null; ?>
+        				</div>
+							</div>
+						</div>
+						<div class="input-contenedor">
+							<div class="form-group">
+                <i class="fas fa-key icon"></i>
+								<label><b>Repetir Password:</b></label>
+								<input
+									type="password"
+									name="rePassword"
+									class="form-control <?= isset($errorsInRegister['rePassword']) ? 'is-invalid' : null; ?>"
+								>
+								<div class="invalid-feedback">
+          				<?= isset($errorsInRegister['rePassword']) ? $errorsInRegister['rePassword'] : null; ?>
+        				</div>
+							</div>
+						</div>
+						<div class="input-contenedor">
+							<div class="form-group">
+								<label><b>Imagen de perfil:</b></label>
+								<div class="custom-file">
+									<input
+										type="file"
+									 	name="avatar"
+										class="custom-file-input <?= isset($errorsInRegister['avatar']) ? 'is-invalid' : null; ?>"
+									>
+									<label class="custom-file-label">Choose file...</label>
+									<div class="invalid-feedback">
+	          				<?= isset($errorsInRegister['avatar']) ? $errorsInRegister['avatar'] : null; ?>
+	        				</div>
+								</div>
+							</div>
+						</div>
+						<div class="input-contenedor">
+							<button type="submit" class="btn btn-primary">Registrarse</button>
+						</div>
 
-        <nav class="navbar navbar-expand-lg navbar-light" style="height: 68px;">
-          <div class="container" style="padding-top: 0px;padding-bottom: 0px;">
-              <a class="navbar-brand" href="#">
-                <img class="logo" src="images/logos/logo.png" alt="alibaba style e-commerce html template file" title="alibaba e-commerce html css theme">
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarTop">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                        Marcas principales
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Nike </a></li>
-                        <li><a class="dropdown-item" href="#">Adidas </a></li>
-                        <li><a class="dropdown-item" href="#">Puma  </a></li>
-                      </ul>
-                  </li>
-                  <li><a href="index.php" class="nav-link " >   Inicio </a></li>
-                  <li><a href="registro.php" class="nav-link " >   Registrate gratis </a></li>
-                  <!-- <li><a href="#" class="nav-link " >   Tiendas oficiales </a></li> -->
-                  <li><a href="preguntas_frecuentes.php" class="nav-link " >   Preguntas frecuentes </a></li>
-                </ul>
-                <ul class="navbar-nav">
-                  <!-- <li class="nav-item"><a href="#" class="nav-link" > Android </a></li>
-                  <img src="https://candymanvendingservice.com/wp-content/uploads/2016/11/icons-apple-android.png" width="50px" height="25px">
-                  <li class="nav-item"><a href="http://bootstrap-ecommerce.com/" class="nav-link" > iOS  </a></li> -->
-                  <li class="nav-item"><a href="perfildelusuario.php" class="nav-link" > Mi cuenta </a></li>
-                </ul> <!-- barra de navegacion.// -->
-              </div> <!-- collapse.// -->
-          </div>
-        </nav>
 
-        <section class="header-main shadow-sm"  style="height: 82px;padding-left: 16px;padding-right: 16px;width: 1381px;">
-          <div class="container" style="padding-top: 0px;padding-bottom: 0px;height: 50px;">
-            <div class="row-sm align-items-center">
-              <div class="col-lg-4-24 col-sm-3">
-                <div class="category-wrap dropdown py-1">
-                  <button type="button" class="btn btn-light  dropdown-toggle" data-toggle="dropdown" ><i class="fa fa-bars"></i> Categorias</button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Hombres </a>
-                    <a class="dropdown-item" href="#">Mujeres</a>
-                    <a class="dropdown-item" href="#">Niños</a>
-                    <a class="dropdown-item" href="#">Marcas </a>
-                    <a class="dropdown-item" href="#">Zapatillas </a>
-                    <a class="dropdown-item" href="#">Ofertas</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-11-24 col-sm-8">
-                <form action="#" class="py-1">
-                  <div class="input-group w-100">
-                    <input type="text" class="form-control" style="width:50%;" placeholder="Buscar...">
-                    <div class="input-group-append">
-                        <button class="btn btn-dark" type="submit">
-                          <i class="fa fa-search"></i> Buscar
-                        </button>
-                    </div>
-                  </div>
-                </form> <!-- busqueda .end// -->
-              </div> <!-- col.// -->
-              <div class="col-lg-9-24 col-sm-12">
-                <div class="widgets-wrap float-right row no-gutters py-1">
-                  <div class="col-auto">
-                      <div class="widget-header dropdown">
-                        <a href="#" data-toggle="dropdown" data-offset="20,10">
-                          <div class="icontext">
-                            <div class="icon-wrap">
-                              <i class="text-dark icon-sm fa fa-user"></i>
-                            </div>
-                            <div class="text-wrap text-dark">
-                              <a href="login.php">Iniciar sesión</a>
-                              <br>
-                              <!-- Mi Cuenta <i class="fa fa-caret-down"></i> -->
-                            </div>
-                          </div>
-                        </a>
-                        <div class="dropdown-menu">
-                        <form class="px-4 py-3">
-                          <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" class="form-control" placeholder="email@tucorreo.com">
-                          </div>
-                          <div class="form-group">
-                            <label>Contraseña</label>
-                            <input type="password" class="form-control" placeholder="Contraseña">
-                          </div>
-                            <button type="submit" class="btn btn-primary">Ingresar</button>
-                          </form>
-                          <hr class="dropdown-divider">
-                          <a class="dropdown-item" href="#">¿Tienes una cuenta? Inicia sesión</a>
-                          <a class="dropdown-item" href="#">Se me olvido la contraseña</a>
-                        </div> <!--  menu .// -->
-                      </div>  <!-- widget-header .// -->
-                    </div> <!-- col.// -->
-                  <div class="col-auto hideonmobile hidetable">
-                    <a href="carrito.php" class="widget-header">
-                      <div class="icontext">
-                        <div class="icon-wrap"><i class="text-dark icon-sm fa fa-shopping-cart"></i></div>
-                        <div class="text-wrap text-dark">
-                            Protección <br>
-                            De Compra
-                        </div>
-                      </div>
-                    </a>
-                  </div> <!-- col.// -->
-                  <div class="col-auto">
-                    <a href="#" class="widget-header">
-                      <div class="icontext">
-                        <div class="icon-wrap"><i class="text-dark icon-sm  fa fa-heart"></i>
-                        </div>
-                        <div class="text-wrap text-dark">
-                          <span class="small round badge badge-secondary">0</span>
-                          <div>Favoritos</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div> <!-- col.// -->
-                </div> <!-- widgets-wrap.// row.// -->
-              </div> <!-- col.// -->
-            </div> <!-- row.// -->
-          </div> <!-- container.// -->
 
-        </section> <!-- fin del header .// -->
 
-    </header> <!-- section-header.// -->
-
-    <form class="formulario" action="registro.php" method="post" enctype="multipart/form-data">
-      <h1 style="font-size: 40px">Registrate</h1>
-        <div class="contenedor">
-
-          <div class="input-contenedor">
-              <i class="fas fa-user icon"></i>
-              <input type="text" placeholder="Nombre completo" name="nombre" value="<?=$nombrePredeterminado?>">
-            </div>
-             <?php if($_POST && isset($errores["nombre"])){ ?>
-               <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
-               <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["nombre"] . "</h3>";
-               }?>
-               </div>
-
-          <div class="input-contenedor">
-            <i class="fas fa-envelope icon"></i>
-            <input type="text" placeholder="Email" name="email" value="<?= $emailPredeterminado ?>">
-            </div>
-            <?php if($_POST && isset($errores["email"])){ ?>
-            <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
-            <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["email"] . "</h3>";
-            }?>
-            </div>
-
-          <div class="input-contenedor">
+           <!-- <div class="input-contenedor">
             <i class="fas fa-phone icon"></i>
             <input type="text" placeholder="Teléfono" name="telefono" value="<?= $telefonoPredeterminado ?>">
             </div>
@@ -271,138 +151,16 @@
             <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
             <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["telefono"] . "</h3>";
             }?>
-            </div>
+            </div> -->
 
-          <div class="input-contenedor">
-            <i class="fas fa-key icon"></i>
-            <input type="password" placeholder="Contraseña" name="contraseña" value="">
-            </div>
-            <?php if($_POST && isset($errores["contraseña"])){ ?>
-            <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
-            <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["contraseña"] . "</h3>";
-            }?>
-            </div>
-
-          <div class="input-contenedor">
-            <i class="fas fa-key icon"></i>
-            <input type="password" placeholder="Verificar contraseña" name="contraseñaverificacion" value="">
-            </div>
-            <?php if($_POST && isset($errores["contraseñaverificacion"])){ ?>
-            <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
-            <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["contraseñaverificacion"] . "</h3>";
-            }?>
-
-            </div>
-            <?php if($contraseña != $contraseñaverificacion) { ?>
-              <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
-              <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["contraseña_equivalentes"] . "</h3>";
-              }?>
-            </div>
-
-          <div class="input-contenedor">
-      				<div class="form-group">
-      					<div class="custom-file">
-      						<input type="file" name="imagenDePerfil" class="custom-file-input">
-      						<label class="custom-file-label">Cargá tu foto de perfil</label>
-      					</div>
-                <!-- <div class="alert alert-danger">
-
-                </div> -->
-      				 </div>
-      			  </div>
-
-          <input type="submit" name="" value="Registrarte" class="button">
           <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
           <p>¿Ya tienes una cuenta?<a class="link" href="login.php"> Iniciar Sesión.</a></p>
         </div>
 
     </form>
 
-    <footer class="section-footer bg-secondary">
-          <div class="container">
-            <section class="footer-top padding-top">
-              <div class="row">
-                <aside class="col-sm-3 col-md-3 white marginMobile">
-                  <h5 class="title">Institucional</h5>
-                  <ul class="list-unstyled">
-                    <li> <a href="#">¿Quiénes somos?</a></li>
-                    <li> <a href="#">Investor Relations</a></li>
-                    <li> <a href="#">Términos y condiciones</a></li>
-                    <li> <a href="#">Eventos</a></li>
-                  </ul>
-                </aside>
-                <aside class="col-sm-3  col-md-3 white marginMobile">
-                  <h5 class="title">Ayuda</h5>
-                  <ul class="list-unstyled">
-                    <li> <a href="#"> Entregas </a></li>
-                    <li> <a href="#"> Pagos </a></li>
-                    <li> <a href="#"> Cambios </a></li>
-                    <li> <a href="#"> Mi Pedidos </a></li>
-                  </ul>
-                </aside>
-                <aside class="col-sm-3  col-md-3 white marginMobile">
-                  <h5 class="title">Políticas</h5>
-                  <ul class="list-unstyled">
-                    <li> <a href="#"> Política de Privacidad </a></li>
-                    <li> <a href="#"> Política de Envio Gratis </a></li>
-
-                  </ul>
-                </aside>
-                <aside class="col-sm-3">
-                  <article class="white marginMobile">
-                    <h5 class="title">Centro de Atención a Clientes</h5>
-                    <p>
-                      <strong>Teléfono: </strong> + 54 (11) 50328143 <br>
-                        <strong>Interior:</strong> 0810-444-6387
-                    </p>
-
-                     <div class="btn-group white">
-                        <a class="btn btn-facebook" title="Facebook" target="_blank" href="#"><i class="fab fa-facebook-f  fa-fw"></i></a>
-                        <a class="btn btn-instagram" title="Instagram" target="_blank" href="#"><i class="fab fa-instagram  fa-fw"></i></a>
-                        <a class="btn btn-twitter" title="Twitter" target="_blank" href="#"><i class="fab fa-twitter  fa-fw"></i></a>
-                    </div>
-                  </article>
-                </aside>
-              </div> <!-- row.// -->
-              <br>
-            </section>
-            <section class="footer-bottom row border-top-white">
-              <div class="col-sm-4">
-                <p class="text-white-50"> Hecho con <3 <br>  en Nordelta.</p>
-              </div>
-              <div class="col-sm-4 payments-and-seals-content table">
-                  <ul class="payment-flag-list">
-                    <li><img src="https://static.netshoes.com.ar/0.0.387.9/netshoesar/svg/payment-flags/visa.svg" title="Visa" alt="Visa"></li>
-                    <li><img src="https://static.netshoes.com.ar/0.0.387.9/netshoesar/svg/payment-flags/mastercard.svg" title="Mastercard" alt="Mastercard"></li>
-                    <li><img src="https://static.netshoes.com.ar/0.0.387.9/netshoesar/svg/payment-flags/amex.svg" title="American Express" alt="American Express"></li>
-                    <li><img src="https://static.netshoes.com.ar/0.0.387.9/netshoesar/svg/payment-flags/naranja.svg" title="Naranja" alt="Naranja"></li><li><img src="https://static.netshoes.com.ar/0.0.387.9/netshoesar/svg/payment-flags/visadebito.svg" title="Visa" alt="Visa"></li>
-                    <li><img src="https://static.netshoes.com.ar/0.0.387.9/netshoesar/svg/payment-flags/pagofacil.svg" title="Pago Fácil" alt="Pago Fácil"></li>
-                    <li><a href="http://www.ahora12.gob.ar/index.php" target="_blank" class="footer-stamp-AhoraPago"><img src="https://static.netshoes.com.ar/0.0.387.9/netshoesar/images/stamp-AhoraPago.svg" title="AHORA 3y6" alt="AHORA 3y6"></a></li>
-                  </ul></div>
-
-              <div class="col-sm-4">
-                <p class="text-md-right text-white-50">
-          Copyright &copy  <br>
-        <a href="#" class="text-white-50">Grupo 4.</a>
-                </p>
-              </div>
-            </section> <!-- //footer-top -->
-          </div><!-- //container -->
-      </footer>
-
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
-    <script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
-    <script  src="js/scriptSC.js"></script>
+<?php
+  require_once 'footer.php';
+ ?>
   </body>
 </html>

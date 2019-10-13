@@ -2,15 +2,15 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-          <a class="navbar-brand" href="#">
-            <img class="logo" src="images/logos/logo.png" alt="alibaba style e-commerce html template file" title="alibaba e-commerce html css theme">
-          </a>
+          <!-- <a class="navbar-brand" href="#">
+            <img class="logo" src="images/logos/logo DG-01.png" alt="alibaba style e-commerce html template file" title="alibaba e-commerce html css theme">
+          </a> -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarTop">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item dropdown">
+              <!-- <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                     Marcas principales
                   </a>
@@ -19,7 +19,7 @@
                     <li><a class="dropdown-item" href="#">Adidas </a></li>
                     <li><a class="dropdown-item" href="#">Puma  </a></li>
                   </ul>
-              </li>
+              </li> -->
               <li><a href="index.php" class="nav-link " >   Inicio </a></li>
               <li><a href="registro.php" class="nav-link " >   Registrate gratis </a></li>
               <!-- <li><a href="#" class="nav-link " >   Tiendas oficiales </a></li> -->
