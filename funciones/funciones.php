@@ -5,8 +5,8 @@
 
 	// Definimos las constantes que necesitamos en nuestro proyecto, de esta manera puedo usar las mismas dentro de las funciones sin tener que usar una variable global o pasarla por parámetro
 	define('ALLOWED_IMAGE_FORMATS', ['jpg', 'jpeg', 'png', 'gif']);
-	define('IMAGE_PATH', dirname(__FILE__) . 'data/avatars/');
-	define('USERS_JSON_PATH', dirname(__FILE__) . 'data/users.json');
+	define('IMAGE_PATH', 'data/avatars/');
+	define('USERS_JSON_PATH', 'data/users.json');
 
 
 	// Si está la cookie almacenada y si NO está logueda la persona:

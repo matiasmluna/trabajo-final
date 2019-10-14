@@ -1,7 +1,7 @@
 <?php
 	// Incluimos el controlador del registro-login
 	// De esta manera tengo el scope a la funciones que necesito
-	require_once 'login-controller.php';
+	require_once 'funciones/funciones.php';
   $pageTitle = 'Iniciar Sesión';
 	// Si está logueda la persona la redirijo al profile
 	if ( isLogged() ) {
@@ -38,34 +38,76 @@
 
 	require_once 'navbar.php';
 	require_once 'header.php';
-
 ?>
 
 <!doctype html>
 <html lang="en">
 
 
-  <body>
+ <body>
 
-  <section>
-      <div class="container">
-        <form class="formulario" action="index.html" method="post">
-          <h1 style="font-size: 40px">Iniciar sesión</h1>
-          <div class="container">
-          <div class="input-contenedor">
-            <i class="fas fa-envelope icon"></i>
-            <input type="text" placeholder="Email" name="" value="">
-          </div>
+		<!-- Register-Form -->
+	<div class="container" style="margin-top:30px; margin-bottom: 30px;width:450px;">
+		<div class="row justify-content-center">
+			<div class="col-md-10">
+				<?php if (count($errorsInLogin) > 0): ?>
+					<div class="alert alert-danger">
+						<ul>
+							<?php foreach ($errorsInLogin as $oneError): ?>
+								<li> <?= $oneError; ?> </li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+				<?php endif; ?>
 
-          <div class="input-contenedor">
-            <i class="fas fa-key icon"></i>
-            <input type="password" placeholder="Contraseña" name="" value="">
-          </div>
-          <input type="submit" name="" value="Iniciar sesión" class="button">
-          <p>¿No tienes una cuenta?<a class="link" href="registro.php"> Registrarte.</a></p>
-        </div>
-      </form>
-    </div>
-  </section>
-  </html>
+				<h2 style="font-size: 40px">Iniciar sesión</h2>
+
+				<form method="POST">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<i class="fas fa-envelope icon"></i>
+								<label><b>Correo electrónico:</b></label>
+								<input
+									type="text"
+									name="email"
+									class="form-control"
+									value="<?= $email; ?>"
+								>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<i class="fas fa-key icon"></i>
+								<label><b>Password:</b></label>
+								<input
+									type="password"
+									name="password"
+									class="form-control"
+								>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="rememberUser">
+									Recordarme
+							  </label>
+							</div>
+							<br>
+						</div>
+						<div class="col-12">
+							<button type="submit" class="btn btn-primary">Ingresar</button>
+							¿Aún no tenés cuenta? <a href="registro.php">Registrate</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- //Register-Form -->
+
+
+</body>
+</html>
 <?php require_once 'footer.php'; ?>

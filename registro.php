@@ -37,13 +37,18 @@
 			$imgName = saveImage();
 
 			// Creo en $_POST una posición "avatar" para guardar el nombre de la imagen
-			$_POST["imagenDePerfil"] = $imgName;
+			$_POST["avatar"] = $imgName;
 
 			// Guardo al usuario en el archivo JSON, y me devuelve al usuario que guardó en array
 			$theUser = saveUser();
 
 			// Al momento en que se registar vamos a mantener la sesión abierta
 			setcookie('userLoged', $theUser['email'], time() + 3000);
+
+			// Preguntamos si quiere ser recordado
+			if ( isset($_POST['rememberUser']) ) {
+				setcookie('userLoged', $email, time() + 3000);
+			}
 
 			// Logueo al usuario
 			login($theUser);
@@ -58,7 +63,7 @@
 
   <body>
 
-    <div class="contenedor">
+    <div class="container" style="padding-top: 15px;width:450px;">
       <form method="POST" enctype="multipart/form-data">
         <h1 style="font-size: 40px">Registrate</h1>
 						<div class="input-contenedor">
@@ -138,19 +143,15 @@
 						<div class="input-contenedor">
 							<button type="submit" class="btn btn-primary">Registrarse</button>
 						</div>
-
-
-
-
-           <!-- <div class="input-contenedor">
-            <i class="fas fa-phone icon"></i>
-            <input type="text" placeholder="Teléfono" name="telefono" value="<?= $telefonoPredeterminado ?>">
-            </div>
-            <?php if($_POST && isset($errores["telefono"])){ ?>
-            <div class="alert alert-danger" style="height: 36px;padding-bottom: 6px;padding-top: 6px;padding-left: 10px;padding-right: 10px;margin-bottom: 8px;">
-            <?php echo '<h3 class="input style-3" style="font-size:8px">' . $errores["telefono"] . "</h3>";
-            }?>
-            </div> -->
+						<div class="input-contenedor">
+							<div class="form-check" style="margin-top: 10px;">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="rememberUser">
+									Recordarme
+								</label>
+							</div>
+							<br>
+						</div>
 
           <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
           <p>¿Ya tienes una cuenta?<a class="link" href="login.php"> Iniciar Sesión.</a></p>

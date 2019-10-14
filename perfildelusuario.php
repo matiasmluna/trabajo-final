@@ -2,7 +2,19 @@
 
 require_once 'funciones/funciones.php';
 
+// Si no está logueda la persona la redirijo al login
+if ( !isLogged() ) {
+  header('location: login.php');
+  exit;
+}
+
+$pageTitle = 'Profile';
+
 require_once 'header.php';
+
+$theUser = $_SESSION['userLoged'];
+
+
 
 require_once 'navbar.php';
 
@@ -13,18 +25,28 @@ require_once 'navbar.php';
 
   <body>
 
-    <div class="container" style="margin: 5px">
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <br>
+            <h2 style="font-size: 40px">Hola <?= $theUser['name']; ?></h2>
+            <img src="data/avatars/<?= $theUser['avatar']; ?>" alt="imagen usuario">
+            <br><br>
+            <a href="#" class="btn btn-info"><?= $theUser['email']; ?></a>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="container" style="margin: 5px">
             <div class="container" style="margin: 15px;">
               <br>
               <h2 style="font-size: 36px" class="text-center">MI CUENTA</h1>
-                <!-- <button type="button" class="btn btn-warning">
-                  <a style="color: white;" href="index.php" class="aling-center">Volver al Inicio</a>
-                </button> -->
             </div>
             <br>
             <div class="row">
               <div class="container col-5">
-                  <!--left col-->
                   <ul class="list-group">
                       <li class="list-group-item text-center" contenteditable="false">Perfil</li>
                       <li class="list-group-item text-center"><span class="pull-left"><strong class="">Nombre: </strong></span> Joaquin Buenaobra</li>
@@ -39,9 +61,9 @@ require_once 'navbar.php';
 
                   </ul>
               </div>
-              <!--/col-3-->
           </div>
-    </div>
+    </div> -->
+
     <br>
 
   <?php require_once 'footer.php'; ?>

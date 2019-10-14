@@ -1,3 +1,8 @@
+<?php
+  require_once 'funciones/funciones.php';
+
+ ?>
+
 <header class="section-header">
 
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -38,7 +43,7 @@
       							<?= $_SESSION['userLoged']['name'] ?>
       						</a>
       						<div class="dropdown-menu" aria-labelledby="dropNavBar">
-      							<a class="dropdown-item" href="profile.php">Mi perfil</a>
+      							<a class="dropdown-item" href="perfildelusuario.php">Mi perfil</a>
       							<a class="dropdown-item" href="logout.php">Salir</a>
       						</div>
       					</li>
