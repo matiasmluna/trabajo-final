@@ -26,16 +26,6 @@ require_once 'navbar.php';
    margin-bottom: 16px;
    resize: vertical;
  }
- input[type=email], select, textarea {
-   width: 100%;
-   padding: 12px;
-   border: 1px solid #ccc;
-   border-radius: 4px;
-   box-sizing: border-box;
-   margin-top: 6px;
-   margin-bottom: 16px;
-   resize: vertical;
- }
 
  input[type=submit] {
    background-color: #4CAF50;
@@ -60,21 +50,9 @@ require_once 'navbar.php';
  <body>
 
 <div class="container mt-5 mb-5">
-  <h3>Formulario de Contacto</h3>
- <div class="containerform">
-   <form action="gracias.php" method="post">
-     <label for="fname">Nombre</label>
-     <input type="text" id="fname" name="firstname" placeholder="Nombre.." required>
+  <h3>Gracias por contactarnos</h3>
+  <h4>Pronto nos comunicaremos contigo</h4>
 
-     <label for="mail">Correo</label>
-     <input type="email" id="mail" name="mail" placeholder="Tu correo.." required>
-
-     <label for="subject">Mensaje</label>
-     <textarea id="subject" name="subject" placeholder="Tu mensaje.." style="height:200px"></textarea>
-
-     <input type="submit" value="Enviar">
-   </form>
- </div>
  </div>
 
 
