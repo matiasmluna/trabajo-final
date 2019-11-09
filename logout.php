@@ -5,5 +5,6 @@
 
 	setcookie('userLoged', null, time() - 1);
 
-	header('location: index.php');
-	exit;
+	header('location: index.php');exit;
+
+?>

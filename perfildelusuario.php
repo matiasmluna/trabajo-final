@@ -4,24 +4,23 @@ require_once 'funciones/funciones.php';
 
 // Si no está logueda la persona la redirijo al login
 if ( !isLogged() ) {
-  header('location: login.php');
-  exit;
+  header('location: login.php');exit;
 }
 
 $pageTitle = 'Profile';
 
-require_once 'header.php';
-
 $theUser = $_SESSION['userLoged'];
-
-
-
-require_once 'navbar.php';
 
  ?>
 
 <!doctype html>
 <html lang="en">
+
+  <head>
+    <?php require_once 'partials/header.php' ?>
+    <?php require_once 'partials/navbar.php' ?>
+  </head>
+
 
   <body>
 
@@ -66,6 +65,7 @@ require_once 'navbar.php';
 
     <br>
 
-  <?php require_once 'footer.php'; ?>
+    <?php require_once 'partials/footer.php'; ?>
+
   </body>
 </html>

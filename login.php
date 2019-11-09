@@ -36,12 +36,15 @@
 		}
 	}
 
-	require_once 'navbar.php';
-	require_once 'header.php';
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="en" >
+
+<head>
+  <?php require_once 'partials/header.php' ?>
+  <?php require_once 'partials/navbar.php' ?>
+</head>
 
 
  <body>
@@ -108,6 +111,8 @@
 	<!-- //Register-Form -->
 
 
-</body>
+	<?php require_once 'partials/footer.php'; ?>
+
+	</body>
+
 </html>
-<?php require_once 'footer.php'; ?>

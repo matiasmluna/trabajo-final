@@ -1,10 +1,11 @@
 <?php
   require_once 'funciones/funciones.php';
 
- ?>
+?>
 
 <header class="section-header">
 
+  <main>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
           <!-- <a class="navbar-brand" href="#">
@@ -51,8 +52,9 @@
 			      </ul>
       </div>
     </nav>
+   </main>
 
-    <section class="header-main shadow-sm">
+  <section class="header-main shadow-sm">
       <div class="container">
         <div class="row-sm align-items-center">
           <div class="col-lg-4-24 col-sm-3">

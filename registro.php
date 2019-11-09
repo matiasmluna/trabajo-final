@@ -10,8 +10,6 @@
 	}
 
 	$pageTitle = 'Register';
-	require_once 'header.php';
-
 
 	// Creamos esta variable con Array vacío para que no de error al entrar por GET
 	$errorsInRegister = [];
@@ -55,11 +53,15 @@
 		}
 	}
 
-	require_once 'navbar.php';
 ?>
 
 <!doctype html>
 <html lang="en">
+
+	<head>
+  	<?php require_once 'partials/header.php' ?>
+  	<?php require_once 'partials/navbar.php' ?>
+	</head>
 
   <body>
 
@@ -159,8 +161,6 @@
 
     </form>
 
-<?php
-  require_once 'footer.php';
- ?>
+		<?php require_once 'partials/footer.php';?>
   </body>
 </html>
