@@ -80,7 +80,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <div class="p-t-20">
-                                        <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock m-r-5"></i> Recuperar contrasena</button>
+                                    <a href="{{ url('') }}"  class="btn btn-danger" id="to-recover"> Volver al sitio web</a>
                                         <button class="btn btn-success float-right" type="submit">Iniciar Sesion</button>
                                     </div>
                                 </div>
@@ -90,37 +90,13 @@
                             <div class="col-12">
                                 <div class="text-center">
                                     <div class="p-t-20">
-                                    <a href="{{ url('') }}"  class="btn btn-danger" id="to-recover"> Volver al sitio web</a>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                     </form>
-                </div>
-                <div id="recoverform">
-                    <div class="text-center">
-                        <span class="text-white">Enter your e-mail address below and we will send you instructions how to recover a password.</span>
-                    </div>
-                    <div class="row m-t-20">
-                        <!-- Form -->
-                        <form class="col-12" action="index.html">
-                            <!-- email -->
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-danger text-white" id="basic-addon1"><i class="ti-email"></i></span>
-                                </div>
-                                <input type="text" class="form-control form-control-lg" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
-                            </div>
-                            <!-- pwd -->
-                            <div class="row m-t-20 p-t-20 border-top border-secondary">
-                                <div class="col-12">
-                                    <a class="btn btn-success" href="#" id="to-login" name="action">Back To Login</a>
-                                    <button class="btn btn-info float-right" type="button" name="action">Recover</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
@@ -156,10 +132,6 @@
         // ==============================================================
         // Login and Recover Password
         // ==============================================================
-        $('#to-recover').on("click", function() {
-            $("#loginform").slideUp();
-            $("#recoverform").fadeIn();
-        });
         $('#to-login').click(function() {
 
             $("#recoverform").hide();
