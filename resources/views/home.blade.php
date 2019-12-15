@@ -3,10 +3,16 @@
 @section('title')
   Didi Tienda Deportiva
 @endsection
+
 @section('main')
 
 
-
+      <script scr"bootstrap-grid.min.css" type="text/javascript"></script>
+      <script scr"bootstrap-reboot.min.css" type="text/javascript"></script>
+      <script scr"bootstrap.min.css" type="text/javascript"></script>
+      <script scr"style.css" type="text/javascript"></script>
+      <script scr"style.min.css" type="text/javascript"></script>
+      <script scr"homestyle.css" type="text/javascript"></script>
       <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>

@@ -15,18 +15,19 @@ use DB;
 
 class ProductsController extends Controller
 {
-
-    public function index($productId)
-    {
+    public function showProducts(){
+      $productAll = Product::paginate(15);
+      return view('product')->with(compact('productAll'));
+    }
+    public function index($productId){
         $product = Product::find($productId);
 
         return view('product', [
             'product' => $product
         ]);
     }
-
     public function addProduct(Request $request)
-    {
+     {
         if ($request->isMethod('post')) {
             $data = $request->all();
             //echo "<pre>"; print_r($data); die;
@@ -79,7 +80,7 @@ class ProductsController extends Controller
         return view('admin.products.add_product')->with(compact('categories_drop_down'));
     }
     public function editProduct(Request $request, $id = null)
-    {
+     {
         if ($request->isMethod('post')) {
             $data = $request->all();
             //echo "<pre>"; print_r($data); die;
@@ -135,7 +136,7 @@ class ProductsController extends Controller
         return view('admin.products.edit_product')->with(compact('productDetails', 'categories_drop_down'));
     }
     public function deleteProductImage($id = null)
-    {
+     {
         // Get Product Image
         $productImage = Product::where('id', $id)->first();
         // Get Product Image Paths
@@ -159,7 +160,7 @@ class ProductsController extends Controller
         return redirect()->back()->with('flash_message_success', 'Product image has been deleted successfully');
     }
     public function viewProducts(Request $request)
-    {
+     {
         $products = Product::get();
         foreach ($products as $key => $val) {
             $category_name = Category::where(['id' => $val->category_id])->first();
@@ -170,8 +171,9 @@ class ProductsController extends Controller
         return view('admin.products.view_products')->with(compact('products'));
     }
     public function deleteProduct($id = null)
-    {
+     {
         Product::where(['id' => $id])->delete();
         return redirect()->back()->with('flash_message_success', 'El producto fue eliminado');
     }
+
 }

@@ -94,6 +94,7 @@
 </footer>
 <!-- ========================= FOOTER END // ========================= -->
 
-
 <!-- partial -->
 <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
+<script  src="{{ asset('css/js/scriptSC.js')}}"></script>

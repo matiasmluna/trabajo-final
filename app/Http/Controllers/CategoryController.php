@@ -4,8 +4,12 @@ use Illuminate\Http\Request;
 use Auth;
 use Session;
 use App\Category;
-class CategoryController extends Controller
-{
+class CategoryController extends Controller{
+    public function showCat(){
+          $categories = category::all();
+          return view('categories')->with(compact('categories'));
+    }
+
     public function addCategory(Request $request){
     	if($request->isMethod('post')){
     		$data = $request->all();
@@ -50,7 +54,6 @@ class CategoryController extends Controller
         $categories = category::get();
         return view('admin.categories.view_categories')->with(compact('categories'));
     }
-
     public function index($categorySlug) {
         $category = Category::where('slug', $categorySlug)->first();
 
@@ -58,4 +61,5 @@ class CategoryController extends Controller
             'category' => $category
         ]);
     }
+
 }
