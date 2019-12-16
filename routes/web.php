@@ -15,6 +15,11 @@ Route::get('/', 'HomeController@index');
 Route::get('/productos/{productId}', 'ProductsController@index')->name('product');
 Route::get('/categories', 'CategoryController@showCat');
 Route::get('/productos', 'ProductsController@showProducts');
+Route::get('/preguntasfrecuentes', function(){return view("faq");});
+Route::get('/nosotros', function(){return view("nosotros");});
+Route::get('/contacto', function(){return view("contacto");});
+
+
 
 Auth::routes();
 

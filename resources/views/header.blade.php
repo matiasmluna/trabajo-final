@@ -62,9 +62,10 @@
       </ul>
     </div>
 
-    <div class="logo">
+    <!-- <div class="logo">
       <img src="images/logo0.png" alt="logo">
-    </div>
+    </div> -->
+
   </header>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -74,22 +75,22 @@
 <div class="collapse navbar-collapse" id="navbarNavDropdown">
 <ul class="navbar-nav">
   <li class="nav-item">
-    <a class="nav-link" href="#">Home</a>
+    <a class="nav-link" href="/">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Productos</a>
+    <a class="nav-link" href="/productos">Productos</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Marcas</a>
+    <a class="nav-link" href="/categories">Categorias</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Categorias</a>
+    <a class="nav-link" href="/nosotros">Nosotros</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Nosotros</a>
+    <a class="nav-link" href="/contacto">Contacto</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Contacto</a>
+    <a class="nav-link" href="/preguntasfrecuentes">FAQ</a>
   </li>
 </ul>
 </div>
