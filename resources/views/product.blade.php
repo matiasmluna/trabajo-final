@@ -6,22 +6,57 @@
 
 @section('main')
 
-<div class="container py-5">
-    <div class="row">
-      @foreach ($productAll as $producto)
-      <div class="col-12 col-md-6 col-lg-4">
-        <a href="" class="card">
-          <img class="card-img-top" height="100%" weight="100%" src="images/fotozapatilla.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">{{$producto->product_name}}</h5>
+<div class="container">
+
+ <div class="row">
+   @foreach ($productAll as $producto)
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="containerCard">
+        <div class="card">
+          <div class="card-head2">
+            <img src="{{ asset('images/adilogo.jpg') }}" alt="logo" class="card-logo">
+            <img src="{{ asset('images/adidas1-1.jpg') }}" alt="Shoe" class="product-img">
+              <div class="product-detail">
+                <h2>{{$producto->product_name}}</h2>
+                  <p class="fadetext">ADIDAS</p>
+                  <p class="fadetext">ADIDAS</p>
+                  <p class="fadetext">ADIDAS</p>
+              </div>
+              <span class="back-text">NOR</span>
           </div>
-        </a>
+          <div class="card-body">
+            <div class="product-desc">
+              <span class="product-title">Pre<b>dator</b>
+                <span class="badge">Nuevo</span>
+              </span>
+              <span class="product-caption">Adidas Predator 19.4 S FG</span>
+              <span class="product-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star grey"></i>
+              </span>
+            </div>
+            <div class="product-properties">
+              <span class="product-size">
+                <h4>Talle</h4>
+                  <ul class="ul-size">
+                    <li><a href="#" class="active">43</a></li>
+                  </ul>
+              </span>
+              <span class="product-price2">$<b>4,999.00</b></span>
+            </div>
+          </div>
+        </div>
       </div>
-      @endforeach
     </div>
+    @endforeach
+  </div>
+
 </div>
 
-<div class="center">
+<div class="container">
 
   <p>{{$productAll->links()}}</p>
 
