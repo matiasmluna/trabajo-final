@@ -28,7 +28,7 @@
           <div class="collapse navbar-collapse col-4" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/">Mi Perfil</a>
+                <a class="nav-link" href="/perfil">Mi Perfil</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/">Carrito</a>

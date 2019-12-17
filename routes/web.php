@@ -18,6 +18,7 @@ Route::get('/productos', 'ProductsController@showProducts');
 Route::get('/preguntasfrecuentes', function(){return view("faq");});
 Route::get('/nosotros', function(){return view("nosotros");});
 Route::get('/contacto', function(){return view("contacto");});
+Route::get('/perfil', function(){return view("perfil");});
 
 
 
@@ -52,6 +53,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 Route::get('/logout', 'AdminController@logout');
+
 
 
 
