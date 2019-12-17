@@ -55,11 +55,12 @@ class CategoryController extends Controller{
         return view('admin.categories.view_categories')->with(compact('categories'));
     }
     public function index($categorySlug) {
-        $category = Category::where('slug', $categorySlug)->first();
+        $category = Category::where('name', $categorySlug)->get();
 
-        return view('category', [
-            'category' => $category
-        ]);
+        $vac = compact("category");
+        return view('category', $vac
+        // ['category' => $category]
+      );
     }
 
 }

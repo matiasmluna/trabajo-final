@@ -100,8 +100,8 @@ Proyecto integrador
 	    position: absolute;
 	    left: 0;
 	    margin-top: 46px;
-	    margin-left: 50px;
-	    width: 300px;
+	    margin-left: 0px;
+	    width: 280px;
 	}
 
   .product-detail {
@@ -284,12 +284,12 @@ Proyecto integrador
     color: #fff;
     border-radius: 7px;
     margin-top: -13px;
-    margin-left: 43%;
+    margin-left: 0;
     box-shadow: -10px 20px 15px -10px rgba(233, 114, 17, 0.3);
 }
 
   .product-price b {
-	margin-left: 5px;
+	margin-left: 0px;
   }
 
   .product-price2 {
@@ -303,7 +303,7 @@ Proyecto integrador
     color: #fff;
     border-radius: 7px;
     margin-top: -13px;
-    margin-left: 43%;
+    margin-left: 35%;
     box-shadow: -10px 20px 15px -10px rgba(80, 80, 80, 0.3);
 }
 

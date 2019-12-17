@@ -10,7 +10,7 @@
 
  <div class="row">
    @foreach ($productAll as $producto)
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-3">
       <div class="containerCard">
         <div class="card">
           <div class="card-head2">
@@ -18,11 +18,7 @@
             <img src="{{ asset('images/adidas1-1.jpg') }}" alt="Shoe" class="product-img">
               <div class="product-detail">
                 <h2>{{$producto->product_name}}</h2>
-                  <p class="fadetext">ADIDAS</p>
-                  <p class="fadetext">ADIDAS</p>
-                  <p class="fadetext">ADIDAS</p>
               </div>
-              <span class="back-text">NOR</span>
           </div>
           <div class="card-body">
             <div class="product-desc">

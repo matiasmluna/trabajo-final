@@ -5,6 +5,7 @@
 @endsection
 
 @section('main')
+
   <h1>{{ $category->name }}</h1>
 
   <div class="container">
@@ -21,4 +22,6 @@
       @endforeach
     </div>
   </div>
+
+
 @endsection
