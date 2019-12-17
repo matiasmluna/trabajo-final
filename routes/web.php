@@ -56,3 +56,4 @@ Route::get('/logout', 'AdminController@logout');
 
 
 Route::get('/{categorySlug}', 'CategoryController@index')->name('category');
+Route::get('/{categorySlug}/{id}', 'CategoryController@showCategoryProduct')->name('category');

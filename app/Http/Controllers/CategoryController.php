@@ -5,11 +5,11 @@ use Auth;
 use Session;
 use App\Category;
 class CategoryController extends Controller{
+
     public function showCat(){
           $categories = category::all();
           return view('categories')->with(compact('categories'));
     }
-
     public function addCategory(Request $request){
     	if($request->isMethod('post')){
     		$data = $request->all();
@@ -55,11 +55,9 @@ class CategoryController extends Controller{
         return view('admin.categories.view_categories')->with(compact('categories'));
     }
     public function index($categorySlug) {
-        $category = Category::where('name', $categorySlug)->get();
-
-        $vac = compact("category");
-        return view('category', $vac
-        // ['category' => $category]
+        $category = Category::where('slug', $categorySlug)->first();
+        return view('category',
+        ['category' => $category]
       );
     }
 
