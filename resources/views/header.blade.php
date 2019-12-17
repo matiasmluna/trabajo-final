@@ -54,10 +54,10 @@
           <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/productos">Productos</a>
+          <a class="nav-link" href="/categories">Categorias</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/categories">Categorias</a>
+          <a class="nav-link" href="/categories/productos">Productos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/nosotros">Nosotros</a>

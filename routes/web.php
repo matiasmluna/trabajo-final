@@ -12,13 +12,17 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/productos/{productId}', 'ProductsController@index')->name('product');
+Route::get('/categories/productos/{productId}', 'ProductsController@index')->name('product');
 Route::get('/categories', 'CategoryController@showCat');
-Route::get('/productos', 'ProductsController@showProducts');
+Route::get('/categories/productos', 'ProductsController@showProducts');
 Route::get('/preguntasfrecuentes', function(){return view("faq");});
 Route::get('/nosotros', function(){return view("nosotros");});
 Route::get('/contacto', function(){return view("contacto");});
 Route::get('/perfil', function(){return view("perfil");});
+Route::get('/categories/{categorySlug}', 'CategoryController@index')->name('category');
+
+Route::get('/{categorySlug}/{id}', 'CategoryController@showCategoryProduct')->name('category');
+
 
 
 
@@ -53,9 +57,3 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 Route::get('/logout', 'AdminController@logout');
-
-
-
-
-Route::get('/{categorySlug}', 'CategoryController@index')->name('category');
-Route::get('/{categorySlug}/{id}', 'CategoryController@showCategoryProduct')->name('category');
