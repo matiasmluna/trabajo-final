@@ -16,13 +16,13 @@ use DB;
 class ProductsController extends Controller
 {
     public function showProducts(){
-      $productAll = Product::paginate(15);
-      return view('product')->with(compact('productAll'));
+      $product = Product::paginate(8);
+      return view('product')->with(compact('product'));
     }
     public function index($productId){
         $product = Product::find($productId);
 
-        return view('product', [
+        return view('productWithID', [
             'product' => $product
         ]);
     }
@@ -174,6 +174,6 @@ class ProductsController extends Controller
      {
         Product::where(['id' => $id])->delete();
         return redirect()->back()->with('flash_message_success', 'El producto fue eliminado');
-    }
+     }
 
 }

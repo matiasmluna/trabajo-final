@@ -9,13 +9,12 @@
 <div class="container">
 
  <div class="row">
-   @foreach ($productAll as $producto)
+   @foreach ($product as $producto)
     <div class="col-12 col-md-6 col-lg-3">
       <div class="containerCard">
         <div class="card">
           <div class="card-head2">
-            <img src="{{ asset('images/adilogo.jpg') }}" alt="logo" class="card-logo">
-            <img src="{{ asset('images/adidas1-1.jpg') }}" alt="Shoe" class="product-img">
+            <img src="images/backend_img/product/medium/{{ $producto->image }}" alt="Shoes" class="product-img">
               <div class="product-detail">
                 <h2>{{$producto->product_name}}</h2>
               </div>
@@ -49,12 +48,10 @@
     </div>
     @endforeach
   </div>
-
 </div>
 
-<div class="container">
-
-  <p>{{$productAll->links()}}</p>
-
+<div class="container" style="margin:10px">
+  {{$product->links() }}
 </div>
+
 @endsection
