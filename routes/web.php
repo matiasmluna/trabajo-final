@@ -21,7 +21,7 @@ Route::get('/contacto', function(){return view("contacto");});
 Route::get('/perfil', function(){return view("perfil");});
 Route::get('/categories/{categorySlug}', 'CategoryController@index')->name('category');
 
-Route::get('/{categorySlug}/{id}', 'CategoryController@showCategoryProduct')->name('category');
+// Route::get('/{categorySlug}/{id}', 'CategoryController@showCategoryProduct')->name('category');
 
 
 
