@@ -19,6 +19,7 @@ class ProductsController extends Controller
       $product = Product::paginate(8);
       return view('product')->with(compact('product'));
     }
+
     public function index($productId){
         $product = Product::find($productId);
 
@@ -26,6 +27,7 @@ class ProductsController extends Controller
             'product' => $product
         ]);
     }
+    
     public function addProduct(Request $request)
      {
         if ($request->isMethod('post')) {

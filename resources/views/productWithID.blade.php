@@ -7,36 +7,54 @@
 @section('main')
 
 <div class="card">
-    <div class="row">
-      <div class="col-sm-6 border-right">
-  <article class="gallery-wrap">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="img-big-wrap">
-            <div> <a href="images/product2.jpg" data-fancybox=""><img src="images/product2.jpg"></a></div>
-          </div> <!-- slider-product.// -->
-         </div>
-        <div class="col-sm-6">
-          <div class="img-big-wrap">
-            <div> <video height="450px" autoplay="" loop="" playsinline="" muted=""><source src="https://c.static-nike.com/a/videos/q_90,vc_vp9/mdofi5pjtpn6kus4e2tz/video.webm" type="video/webm; codecs=vp9"></video></div></button></a></div>
-        </div>
-        <div class="col-sm-6">
-            <div class="img-big-wrap">
-              <div> <a href="images/product1.jpg" data-fancybox=""><img src="images/product1.jpg"></a></div>
-            </div> <!-- slider-product.// -->
-           </div>
-           <div class="col-sm-6">
+  <div class="row">
+    @foreach ($product as $producto)
+    <div class="col-sm-6 border-right">
+      <article class="gallery-wrap">
+        <div class="row">
+            <div class="col-sm-6">
               <div class="img-big-wrap">
-                <div> <a href="images/product3.jpg" data-fancybox=""><img src="images/product3.jpg"></a></div>
+                <div>
+                  <a href="images/product2.jpg" data-fancybox="">
+                  <img src="images/product2.jpg">
+                  </a>
+                </div>
               </div> <!-- slider-product.// -->
-             </div> <!-- slider-product.// -->
-    </div>
+            </div>
+          <div class="col-sm-6">
+            <div class="img-big-wrap">
+              <div>
+                <video height="450px" autoplay="" loop="" playsinline="" muted="">
+                  <source src="https://c.static-nike.com/a/videos/q_90,vc_vp9/mdofi5pjtpn6kus4e2tz/video.webm" type="video/webm; codecs=vp9">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="img-big-wrap">
+              <div>
+                <a href="images/product1.jpg" data-fancybox="">
+                  <img src="images/product1.jpg">
+                </a>
+              </div>
+            </div> <!-- slider-product.// -->
+          </div>
+          <div class="col-sm-6">
+            <div class="img-big-wrap">
+              <div>
+                <a href="images/product3.jpg" data-fancybox="">
+                  <img src="images/product3.jpg">
+                </a>
+              </div>
+            </div> <!-- slider-product.// -->
+        </div> <!-- slider-product.// -->
+      </div>
+    </article> <!-- gallery-wrap .end// -->
   </div>
-  </article> <!-- gallery-wrap .end// -->
 
   <div class="col-sm-6">
-  <article class="p-5">
-    <h3 class="title mb-3">NIKE MERCURIAL VAPOR 13 ELITE FG</h3>
+    <article class="p-5">
+      <h3 class="title mb-3">{{$producto->product_name}}</h3>
 
   <div class="mb-3">
     <var class="price h3 text-warning">
@@ -118,6 +136,7 @@
     <a href="#" class="btn  btn-outline-dark"> <i class="fas fa-shopping-cart"></i> Añadir al carrito </a>
   </article> <!-- card-body.// -->
       </div> <!-- col.// -->
+      @endforeach
     </div> <!-- row.// -->
   </div> <!-- card.// -->
 
