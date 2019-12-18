@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="{{ asset('css/homestyles.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/backend_css/bootstrap.min.css') }}">
+  <script src="https://kit.fontawesome.com/1e651f599a.js" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="{{ asset('css/backend_css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/backend_css/bootstrap-reboot.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/backend_css/bootstrap-grid.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/backend_css/style.css') }}">

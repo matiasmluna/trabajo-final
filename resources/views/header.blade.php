@@ -6,9 +6,7 @@
         <div class="row">
 
           <div class="logo col-1">
-          </div>
-          <div class="logo col-1">
-            <img src="images/logo0.png" style="width:100%;height:100%" alt="logo">
+            <img src="images/logo0.png" alt="logo">
           </div>
 
           <div class="col-6" style="padding-top: 15px;">
@@ -22,10 +20,10 @@
                     </button>
                 </div>
               </div>
-            </form> <!-- busqueda .end// -->
-          </div> <!-- col.// -->
+            </form>
+          </div>
 
-          <div class="collapse navbar-collapse col-4" id="navbarNavDropdown">
+          <div>
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="/perfil">Mi Perfil</a>
@@ -71,7 +69,7 @@
       </ul>
     </div>
 
-    <div class="collapse navbar-collapse" id="navbarTop">
+    <div>
       <ul class="navbar-nav ml-auto">
       <!-- Authentication Links -->
       @guest

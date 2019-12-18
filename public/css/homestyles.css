@@ -17,8 +17,8 @@ body {
 .logo img {
   display:block;
   margin: auto;
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
 }
 
 .iconostop {
@@ -64,15 +64,15 @@ body {
  margin-bottom: 15px;
 }
 
-.quienes .contact-info {
+.quienes .contact-info1 {
   margin: 0 auto;
 }
 
-.contacto .contact-info {
+.contacto .contact-info1 {
   margin: 0 auto;
 }
 
-.contact-info{
+.contact-info1{
   display: flex;
   width: 100%;
   max-width: 1200px;
@@ -81,7 +81,7 @@ body {
   padding: 0 20px;
 }
 
-.card{
+.card1{
   background: #2f3542;
   padding: 0 20px;
   margin: 0 10px;
@@ -105,13 +105,13 @@ body {
   transition: 0.3s linear;
 }
 
-.card:hover .card-icon{
+.card1:hover .card-icon{
   background: none;
   color: #ff6348;
   transform: scale(1.6);
 }
 
-.card p{
+.card1 p{
   margin-top: 20px;
   font-weight: 300px;
   letter-spacing: 2px;
@@ -121,7 +121,7 @@ body {
   text-align: center;
 }
 
-.card:hover p{
+.card1:hover p{
   max-height: 40px;
   opacity: 1;
 }
@@ -141,7 +141,7 @@ body {
   .contact-info{
     flex-direction: column;
   }
-  .card{
+  .card1{
     width: 100%;
     max-width: 300px;
     margin: 10px 0;
