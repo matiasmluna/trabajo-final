@@ -7,8 +7,10 @@
 }
 
 .logo1, .buscador1, .boton1 {
-  margin: 15px auto;
-  text-align: center;
+  margin: 7px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {

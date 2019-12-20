@@ -10,10 +10,10 @@
           </div>
 
           <div class="buscador1 col-sm">
-            <form action="/" class="py-1" method="POST">
+            <form action="/"  method="POST">
               {{ csrf_field() }}
               <div class="input-group w-100">
-                <input type="text" class="form-control" style="width:50%;" placeholder="Buscar...">
+                <input type="text" class="form-control" placeholder="Buscar...">
                 <div class="input-group-append">
                     <button class="btn btn-dark" type="submit">
                       <i class="fa fa-search"></i> Buscar
