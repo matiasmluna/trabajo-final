@@ -1,17 +1,15 @@
 <header class="section-header">
 
   <section>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="">
       <div class="container">
         <div class="row">
 
-          <div class="logo col-1">
-          </div>
-          <div class="logo col-1">
-            <img src="images/logo0.png" style="width: 75px;height: 75px;" alt="logo">
+          <div class="logo1 col-sm">
+            <img src="images/logo0.png" style="width: 100px;height: 100px;" alt="logo">
           </div>
 
-          <div class="col-6" style="padding-top: 15px;">
+          <div class="buscador1 col-sm">
             <form action="/" class="py-1" method="POST">
               {{ csrf_field() }}
               <div class="input-group w-100">
@@ -25,7 +23,7 @@
             </form> <!-- busqueda .end// -->
           </div> <!-- col.// -->
 
-          <div class="">
+          <div class="boton1 col-sm">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('cart') }}">Ver Carrito</a>

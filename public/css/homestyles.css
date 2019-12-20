@@ -6,8 +6,9 @@
   font-family: 'Didact Gothic', sans-serif;
 }
 
-body {
-  background-image: linear-gradient(#dfe6e9,#636e72);
+.logo1, .buscador1, .boton1 {
+  margin: 15px auto;
+  text-align: center;
 }
 
 .logo {
@@ -21,44 +22,10 @@ body {
   height: 150px;
 }
 
-.iconostop {
-  background-image: linear-gradient(#dfe6e9,#636e72);
-  color: black;
-  text-align: right;
-}
-
-.iconostop ul li{
-  list-style-type: none;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.iconostop ul li.perfil:hover{
-  color:red;
-  transition: 0.2s;
-}
-
-.iconostop ul li.carrito:hover{
-  color:red;
-  transition: 0.2s;
-}
-
-.iconostop ul li.login:hover{
-  color:green;
-  transition: 0.2s;
-}
-
-.iconostop ul li.logout:hover{
-  color:red;
-  transition: 0.2s;
-}
-
-
 .espaciador {
- background-color: black;
- width: 100%;
+ background-color: gray;
+ width: 60%;
+ margin: 0 auto;
  height: 1px;
  margin-top: 15px;
  margin-bottom: 15px;
