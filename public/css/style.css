@@ -3,6 +3,28 @@ Proyecto integrador
 ===================== */
 /* ==================== Pagina de inicio ======================= */
 
+dropdown-menu.show {
+	display: block;
+	width: 300px!important;
+}
+
+btn-info {
+	color: #fff!important;
+	background-color: #5a5a5a!important;
+	border-color: #2d2d2d!important;
+}
+.badge {
+	position: relative;
+	font-size: 12px;
+	font-weight: 300;
+	color: black;
+	background: white;
+	padding: 2px 5px;
+	border-radius: 4px;
+	top: -2px;
+	margin-left: 5px;
+}
+
 .row #productbanner{
 	justify-content: center;
 	text-align: -webkit-center;
@@ -326,6 +348,7 @@ Proyecto integrador
 		margin-top: 5%;
 		margin-bottom: 1%;
 	}
+
 
 /* Opciones mobiles */
 

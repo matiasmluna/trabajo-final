@@ -27,7 +27,7 @@ Route::get('/contacto', function () {
 Route::match(['get', 'post'], 'perfil', 'UsersController@perfil');
 // Route::get('/categories/{categorySlug}', 'CategoryController@index')->name('category');
 Route::get('/categories/{categorySlug}', 'CategoryController@index')->name('category');
-Route::get('/{categorySlug}/{productSlug}', 'ProductsController@mostrar')->name('product');
+Route::get('/categories/{categorySlug}/{productSlug}', 'ProductsController@mostrar')->name('product');
 Route::get('categories/{categorySlug}', 'CategoryController@index')->name('category');
 
 

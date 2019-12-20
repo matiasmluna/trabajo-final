@@ -56,4 +56,13 @@ class User extends Authenticatable
     public function orders() {
         return $this->hasMany('App\Order');
     }
+
+    public function carritoTotal() {
+        $total = 0;
+        $total = $this->productsInCart->reduce(function ($acum, $productInCart) {
+            return $acum + (    $productInCart->count);
+        });
+
+        return $total;
+    }
 }

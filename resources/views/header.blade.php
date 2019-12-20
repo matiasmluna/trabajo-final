@@ -6,7 +6,7 @@
         <div class="row">
 
           <div class="logo1 col-sm">
-            <img src="images/logo0.png" style="width: 100px;height: 100px;" alt="logo">
+            <a href="{{url('')}}"> <img src="images/logo0.png" style="width: 100px;height: 100px;" alt="logo"></a>
           </div>
 
           <div class="buscador1 col-sm">
@@ -26,10 +26,69 @@
           <div class="boton1 col-sm">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('cart') }}">Ver Carrito</a>
+                <div class="row">
+                  <div class="col-lg-12 col-sm-12 col-12 main-section">
+                    <div class="dropdown">
+                      <button type="button" class="btn btn-info" data-toggle="dropdown">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrito
+                        @if (Auth::user()->productsInCart->isNotEmpty())<span class="badge badge-pill badge-danger">
+                        @guest
+                        0
+                        @else
+                        {{ Auth::user()->carritoTotal() }}
+                        @endguest</span>
+                      </button>
+                      <div class="dropdown-menu">
+                        <div class="row total-header-section">
+                          <div class="col-lg-6 col-sm-6 col-6">
+                            Productos </span>
+                          </div>
+
+                          <?php $total = 0 ?>
+                          @foreach((array) session('cart') as $id => $details)
+                          <?php $total += $details['price'] * $details['quantity'] ?>
+                          @endforeach
+
+                          <div class="col-lg-6 col-sm-6 col-6 total-section text-right">
+                            <p>Total: <span class="text-info">${{ Auth::user()->cartTotal() }}</span></p>
+                          </div>
+                        </div>
+
+                        @if(Auth::user('cart'))
+                        @foreach(Auth::user()->productsInCart as $productInCart)
+                        <div class="row cart-detail">
+                          <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                            <img src="{{ $productInCart->product->image }}" />
+                          </div>
+                          <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                            <p>{{ $productInCart->product->name }}</p>
+                            <span class="price text-info"> ${{ $productInCart->product->price }}</span> <span class="count"> Cantidad: {{ $productInCart->count }}
+                            </span> <span>
+                              <form action="{{ route('removeProductFromCart', ['productId' => $productInCart->product->id]) }}" method="post">
+                                {{ csrf_field() }}
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="hidden" name="product_id" value="{{ $productInCart->product->id }}">
+                                <button class="btn btn-danger" type="submit">X</button>
+                              </form>
+                            </span> </div> </div>
+                            @endforeach @endif <div class="row">
+                                <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
+                                  <a href="{{ url('carrito') }}" class="btn btn-primary btn-block">Ver todos</a>
+                                </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </li>
             </ul>
           </div>
+        @else
+          <div class="dropdown-menu">
+            <div class="row total-header-section">
+              <div class="col-lg-6 col-sm-6 col-6">
+          <p>No hay productos en el carrito</p></div></div></div>
+        @endif
 
         </div>
       </div>
