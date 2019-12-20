@@ -6,7 +6,7 @@
         <div class="row">
 
           <div class="logo1 col-sm">
-            <a href="{{url('')}}"> <img src="images/logo0.png" style="width: 100px;height: 100px;" alt="logo"></a>
+            <a href="{{url('')}}"> <img src="{{ asset('images/logo0.png')}}" style="width: 100px;height: 100px;" alt="logo"></a>
           </div>
 
           <div class="buscador1 col-sm">
