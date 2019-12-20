@@ -1,27 +1,25 @@
 @extends('layout')
 
 @section('title')
-Didi Tienda Deportiva
+{{ $product->name }} - Sport DeeDee
 @endsection
 
 @section('main')
 
 @section('main')
-  <div class="container py-4">
-    <div class="row">
-      <div class="col-12">
+
+  <div class="container-fluid">
+    <div class="row mt-5 mb-5">
+      <div class="col-xs-9 col-md-7">
+          <img src="{{ $product->imageUrl }}" alt="{{ $product->name }}" />
+      </div>
+      <div class="col-xs-3 col-md-5" >
         <h2 class="product-category-name">
           <a href="{{ route('category', ['categorySlug' => $product->category->slug]) }}">{{ $product->category->name }}</a>
         </h2>
         <h1>{{ $product->name }}</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 col-lg-6">
-        <img src="{{ $product->imageUrl }}" alt="{{ $product->name }}" />
-      </div>
-      <div class="col-12 col-lg-6">
-        <p class="display-2 font-weight-bold">${{ $product->price }}</p>
+        <p>{{ $product->description }}</p>
+        <h3 class=" font-weight-bold">${{ $product->price }}</h3>
         @guest
           <a href="{{ route('login') }}" class="btn btn-dark btn-lg">Agregar al carrito</button>
         @else
@@ -38,6 +36,10 @@ Didi Tienda Deportiva
             <button type="submit" class="btn btn-dark btn-lg">Agregar al carrito</button>
           </form>
         @endguest
+      </div>
+    </div>
+  </div>
+
       </div>
     </div>
   </div>
