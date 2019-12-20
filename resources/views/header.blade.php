@@ -147,14 +147,14 @@
         @if (Auth::user()->isAdmin())
             <a class="dropdown-item" href="{{ route('admin') }}">Admin</a>
         @endif
-            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-              document.getElementById('logout-form').submit();">{{ __('Cerrar sesion') }}</a>
+                <a class="dropdown-item" href="/perfil"><i class="fas fa-user"></i>   Mi Perfil</a>
+                <a class="dropdown-item" href="{{ route('cart') }}"><i class="fas fa-shopping-cart"></i>   Carrito</a>
+                <a class="dropdown-item" href="{{ route('orders') }}"><i class="fas fa-truck"></i>   Mis órdenes</a>
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i>   {{ __('Cerrar sesion') }}</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
                 </form>
-                <a class="dropdown-item" href="/perfil">Mi Perfil</a>
-                <a class="dropdown-item" href="{{ route('cart') }}">Carrito</a>
-                <a class="dropdown-item" href="{{ route('orders') }}">Mis órdenes</a>
             </div>
           </li>
       @endguest

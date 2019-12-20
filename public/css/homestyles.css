@@ -6,6 +6,16 @@
   font-family: 'Didact Gothic', sans-serif;
 }
 
+.titulo1 p {
+  font-size: 40px;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  color: black;
+}
+
+.titulo1 {
+    margin-bottom: 10px;
+}
+
 .logo1, .buscador1, .boton1 {
   margin: 7px auto;
   display: flex;
@@ -65,7 +75,7 @@
 
 .card-icon1{
   font-size: 28px;
-  background: #ff6348;
+  background: #2f3542;
   width: 60px;
   height: 60px;
   text-align: center;
@@ -76,8 +86,8 @@
 
 .card1:hover .card-icon1{
   background: none;
-  color: #ff6348;
-  transform: scale(1.6);
+  color: white;
+  transform: scale(2.0);
 }
 
 .card1 p{

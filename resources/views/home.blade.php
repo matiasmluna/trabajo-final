@@ -47,9 +47,11 @@
 
       </div>
 
-  <div class="quienes">
-  <h1>¿Quienes somos?</h1>
+      <div class="titulo1">
+        <p>¿Quienes somos?</p>
+      </div>
 
+  <div class="quienes">
       <div class="contact-info1">
             <div class="card1">
               <i class="card-icon1 fas fa-users"></i>
@@ -75,9 +77,12 @@
 
   </div>
 
+<div class="titulo1">
+    <p>¿Como contactarnos?</p>
+</div>
+
   <div class="contacto">
-  <h1>¿Como contactarnos?</h1>
-          <div class="contact-info1">
+          <div class="contact-info1 mb-5">
             <div class="card1">
               <i class="card-icon1 far fa-envelope"></i>
               <p>deedee@sports.com</p>
@@ -96,5 +101,7 @@
           </div>
 
   </div>
+  <div class="espaciador">
 
+  </div>
 @endsection
