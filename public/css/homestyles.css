@@ -116,22 +116,22 @@
   list-style-type: none;
 }
 
-dropdown-menu.show {
+.dropcart {
 	display: block;
 	width: 300px!important;
 }
 
-btn-info {
+.btncart {
 	color: #fff!important;
 	background-color: #5a5a5a!important;
 	border-color: #2d2d2d!important;
 }
-.badge {
+.badgecart {
 	position: relative;
-	font-size: 12px;
-	font-weight: 300;
-	color: black;
-	background: white;
+	font-size: 12px!important;
+	font-weight: 300!important;
+	color: black!important;
+	background: white!important;
 	padding: 2px 5px;
 	border-radius: 4px;
 	top: -2px;
