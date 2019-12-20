@@ -102,6 +102,7 @@
                                                             <th>ID</th>
                                                             <th>Nombre</th>
                                                             <th>Slug</th>
+                                                            <th>Imagen</th>
                                                             <th>Accion</th>
                                                         </tr>
                                                     </thead>
@@ -111,6 +112,11 @@
                                                             <td class="center">{{ $category->id }}</td>
                                                             <td class="center">{{ $category->name }}</td>
                                                             <td class="center">{{ $category->url }}</td>
+                                                            <td class="center">
+                                                                @if(!empty($category->image))
+                                                                <img src="{{ asset('/images/backend_img/product/small/'.$category->image) }}" style="width:50px;">
+                                                                @endif
+                                                            </td>
                                                             <td class="center">
                                                                 <a href="{{ url('/admin/edit-category/'.$category->id) }}" class="btn btn-primary btn-mini">Editar</a>
                                                                 <a id="delCat" href="{{ url('/admin/delete-category/'.$category->id) }}" rel="{{ $category->id }}" rel1="delete-category" href="{{ url('/admin/delete-category/'.$category->id) }}" class="btn btn-danger btn-mini deleteRecord" onclick="return confirm('Estas seguro que deseas eliminarla?')">Borrar</a></td>
@@ -122,6 +128,7 @@
                                                             <th>ID</th>
                                                             <th>Nombre</th>
                                                             <th>Slug</th>
+                                                            <th>Imagen</th>
                                                             <th>Accion</th>
                                                         </tr>
                                                     </tfoot>
