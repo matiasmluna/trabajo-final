@@ -56,7 +56,7 @@
                     </div>
                     @endif
                     <div class="text-center p-t-20 p-b-20">
-                        <span class="db"><img src="https://respuestas.tips/wp-content/uploads/2014/08/hermana-de-dexter.jpg" alt="homepage" class="light-logo" style="width: 50px;"></span>
+                        <span class="db"><img src="{{ asset('images/logo0.png')}}" alt="homepage" class="light-logo" style="width: 50px;"></span>
                     </div>
                     <!-- Form -->
                     <form class="form-horizontal m-t-20" id="loginform" method="POST" action="{{ url('admin') }}"> {{ csrf_field() }}
