@@ -23,13 +23,13 @@
             </form> <!-- busqueda .end// -->
           </div> <!-- col.// -->
 
-          <div class="boton1 col-sm">
+            <div class="boton1 col-sm">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <div class="row">
                   <div class="col-lg-12 col-sm-12 col-12 main-section">
-                    <div class="dropdown">
-                      <button type="button" class="btn btn-info" data-toggle="dropdown">
+                    <div class="dropdown dropcart">
+                      <button type="button" class="btn btn-info btncart" data-toggle="dropdown">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrito
                       @guest
                         <div class="dropdown-menu">
@@ -37,15 +37,14 @@
                             <div class="col-lg-6 col-sm-6 col-6">
                         <p>No hay productos en el carrito</p></div></div></div>
                       @else
-                        @if (Auth::user()->productsInCart->isNotEmpty())<span class="badge badge-pill badge-danger">
+                        @if (Auth::user()->productsInCart->isNotEmpty())<span class="badge badge-pill badgecart">
                         {{ Auth::user()->carritoTotal() }}
                       </span>
                       </button>
-                      <div class="dropdown-menu">
+                      <div class="dropdown-menu dropcart">
                         <div class="row total-header-section">
                           <div class="col-lg-6 col-sm-6 col-6">
                             Productos </span>
-                          </div>
 
                           <?php $total = 0 ?>
                           @foreach((array) session('cart') as $id => $details)
