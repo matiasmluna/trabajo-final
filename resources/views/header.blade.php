@@ -31,12 +31,15 @@
                     <div class="dropdown">
                       <button type="button" class="btn btn-info" data-toggle="dropdown">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrito
+                      @guest
+                        <div class="dropdown-menu">
+                          <div class="row total-header-section">
+                            <div class="col-lg-6 col-sm-6 col-6">
+                        <p>No hay productos en el carrito</p></div></div></div>
+                      @else
                         @if (Auth::user()->productsInCart->isNotEmpty())<span class="badge badge-pill badge-danger">
-                        @guest
-                        0
-                        @else
                         {{ Auth::user()->carritoTotal() }}
-                        @endguest</span>
+                      </span>
                       </button>
                       <div class="dropdown-menu">
                         <div class="row total-header-section">
@@ -89,7 +92,7 @@
               <div class="col-lg-6 col-sm-6 col-6">
           <p>No hay productos en el carrito</p></div></div></div>
         @endif
-
+      @endguest
         </div>
       </div>
     </nav>

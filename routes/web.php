@@ -30,7 +30,7 @@ Route::get('/categories/{categorySlug}', 'CategoryController@index')->name('cate
 Route::get('/categories/{categorySlug}/{productSlug}', 'ProductsController@mostrar')->name('product');
 Route::get('categories/{categorySlug}', 'CategoryController@index')->name('category');
 
-
+Route::get('change-password', 'ChangePasswordController@index')->middleware('auth');
 
 //Carrito y checkout
 Route::post('/cart/{productId}', 'CartController@addProduct')->name('addProductToCart');

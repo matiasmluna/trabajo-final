@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
-    <title>Administrador de Didi</title>
+    <title>Administrador de Sport DeeDee</title>
     <!-- Custom CSS -->
     <link href="{{ asset('css/backend_css/style.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/backend_css/bootstrap.min.css') }}" rel="stylesheet">

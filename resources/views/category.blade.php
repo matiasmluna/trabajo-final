@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-  {{$category->name}} - Tienda DeeDee
+  {{$category->name}} - Sport DeeDee
 @endsection
 
 @section('main')
