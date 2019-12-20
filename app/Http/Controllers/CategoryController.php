@@ -39,7 +39,26 @@ class CategoryController extends Controller{
             }else{
                 $status='1';
             }
-            Category::where(['id'=>$id])->update(['status'=>$status,'name'=>$data['category_name'],'description'=>$data['description'],'slug'=>$data['slug']]);
+            // Upload Image
+            if ($request->hasFile('image')) {
+                $image_tmp = Input::file('image');
+                if ($image_tmp->isValid()) {
+                    // Upload Images after Resize
+                    $extension = $image_tmp->getClientOriginalExtension();
+                    $fileName = rand(111, 99999) . '.' . $extension;
+                    $large_image_path = 'images/backend_img/product/large' . '/' . $fileName;
+                    $medium_image_path = 'images/backend_img/product/medium' . '/' . $fileName;
+                    $small_image_path = 'images/backend_img/product/small' . '/' . $fileName;
+                    Image::make($image_tmp)->save($large_image_path);
+                    Image::make($image_tmp)->resize(600, 600)->save($medium_image_path);
+                    Image::make($image_tmp)->resize(300, 300)->save($small_image_path);
+                }
+            } else if (!empty($data['current_image'])) {
+                $fileName = $data['current_image'];
+            } else {
+                $fileName = '';
+            }
+            Category::where(['id'=>$id])->update(['status'=>$status,'name'=>$data['category_name'],'description'=>$data['description'],'slug'=>$data['slug'],'image' => $fileName]);
             return redirect('/admin/view-categories')->with('flash_message_success', 'La categoria se ha modificado');
         }
         $categoryDetails = Category::where(['id'=>$id])->first();
