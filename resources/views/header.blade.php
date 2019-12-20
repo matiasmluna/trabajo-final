@@ -8,7 +8,7 @@
           <div class="logo col-1">
           </div>
           <div class="logo col-1">
-            <img src="images/logo0.png" style="width:100%;height:100%" alt="logo">
+            <img src="images/logo0.png" style="width: 75px;height: 75px;" alt="logo">
           </div>
 
           <div class="col-6" style="padding-top: 15px;">
@@ -25,7 +25,7 @@
             </form> <!-- busqueda .end// -->
           </div> <!-- col.// -->
 
-          <div class="collapse navbar-collapse col-4" id="navbarNavDropdown">
+          <div class="">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('cart') }}">Ver Carrito</a>
@@ -65,7 +65,7 @@
       </ul>
     </div>
 
-    <div class="collapse navbar-collapse" id="navbarTop">
+    <div class="">
       <ul class="navbar-nav ml-auto">
       <!-- Authentication Links -->
       @guest

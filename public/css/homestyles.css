@@ -64,15 +64,15 @@ body {
  margin-bottom: 15px;
 }
 
-.quienes .contact-info {
+.quienes .contact-info1 {
   margin: 0 auto;
 }
 
-.contacto .contact-info {
+.contacto .contact-info1 {
   margin: 0 auto;
 }
 
-.contact-info{
+.contact-info1{
   display: flex;
   width: 100%;
   max-width: 1200px;
@@ -81,7 +81,7 @@ body {
   padding: 0 20px;
 }
 
-.card{
+.card1{
   background: #2f3542;
   padding: 0 20px;
   margin: 0 10px;
@@ -94,7 +94,7 @@ body {
   color: #fff;
 }
 
-.card-icon{
+.card-icon1{
   font-size: 28px;
   background: #ff6348;
   width: 60px;
@@ -105,13 +105,13 @@ body {
   transition: 0.3s linear;
 }
 
-.card:hover .card-icon{
+.card1:hover .card-icon1{
   background: none;
   color: #ff6348;
   transform: scale(1.6);
 }
 
-.card p{
+.card1 p{
   margin-top: 20px;
   font-weight: 300px;
   letter-spacing: 2px;
@@ -121,7 +121,7 @@ body {
   text-align: center;
 }
 
-.card:hover p{
+.card1:hover p{
   max-height: 40px;
   opacity: 1;
 }
@@ -138,10 +138,10 @@ body {
 }
 
 @media screen and (max-width:800px) {
-  .contact-info{
+  .contact-info1{
     flex-direction: column;
   }
-  .card{
+  .card1{
     width: 100%;
     max-width: 300px;
     margin: 10px 0;

@@ -21,7 +21,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="images/slider3.jpg" class="d-block w-100 h-100" alt="...">
-          
+
           </div>
           <div class="carousel-item">
             <img src="images/slider1.jpg" class="d-block w-100 h-100" alt="...">
@@ -50,19 +50,19 @@
   <div class="quienes">
   <h1>¿Quienes somos?</h1>
 
-      <div class="contact-info">
-            <div class="card">
-              <i class="card-icon fas fa-users"></i>
+      <div class="contact-info1">
+            <div class="card1">
+              <i class="card-icon1 fas fa-users"></i>
               <p>Ayudamos a nuestros usuarios a expandir su potencial deportivo</p>
             </div>
 
-            <div class="card">
-              <i class="card-icon fas fa-industry"></i>
+            <div class="card1">
+              <i class="card-icon1 fas fa-industry"></i>
               <p>Productos originales</p>
             </div>
 
-            <div class="card">
-              <i class="card-icon fas fa-truck"></i>
+            <div class="card1">
+              <i class="card-icon1 fas fa-truck"></i>
               <p>Envíos a todo el país</p>
             </div>
 
@@ -77,19 +77,19 @@
 
   <div class="contacto">
   <h1>¿Como contactarnos?</h1>
-          <div class="contact-info">
-            <div class="card">
-              <i class="card-icon far fa-envelope"></i>
+          <div class="contact-info1">
+            <div class="card1">
+              <i class="card-icon1 far fa-envelope"></i>
               <p>deedee@sports.com</p>
             </div>
 
-            <div class="card">
-              <i class="card-icon fab fa-whatsapp"></i>
+            <div class="card1">
+              <i class="card-icon1 fab fa-whatsapp"></i>
               <p>+54 9 11 5472839</p>
             </div>
 
-            <div class="card">
-              <i class="card-icon fas fa-map-marker-alt"></i>
+            <div class="card1">
+              <i class="card-icon1 fas fa-map-marker-alt"></i>
               <p>Nordelta, Buenos Aires</p>
             </div>
 
