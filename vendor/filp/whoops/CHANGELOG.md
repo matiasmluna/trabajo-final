@@ -1,7 +1,3 @@
-# 2.5.1
-
-* Fix error messaging in a rare case.
-
 # 2.5.0
 
 * Automatically configure xdebug if available.
