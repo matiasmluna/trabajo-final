@@ -23,7 +23,7 @@
             </form> <!-- busqueda .end// -->
           </div> <!-- col.// -->
 
-            <div class="boton1 col-sm">
+          <div class="boton1 col-sm">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <div class="row">
@@ -45,6 +45,7 @@
                         <div class="row total-header-section">
                           <div class="col-lg-6 col-sm-6 col-6">
                             Productos </span>
+                          </div>
 
                           <?php $total = 0 ?>
                           @foreach((array) session('cart') as $id => $details)
@@ -146,14 +147,13 @@
         @if (Auth::user()->isAdmin())
             <a class="dropdown-item" href="{{ route('admin') }}">Admin</a>
         @endif
-                <a class="dropdown-item" href="/perfil"><i class="fas fa-user"></i>   Mi Perfil</a>
-                <a class="dropdown-item" href="{{ route('cart') }}"><i class="fas fa-shopping-cart"></i>   Carrito</a>
-                <a class="dropdown-item" href="{{ route('orders') }}"><i class="fas fa-truck"></i>   Mis órdenes</a>
+                <a class="dropdown-item" href="/perfil">Mi Perfil</a>
+                <a class="dropdown-item" href="{{ route('orders') }}">Mis órdenes</a>
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i>   {{ __('Cerrar sesion') }}</a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                  @csrf
-                </form>
+                  document.getElementById('logout-form').submit();">{{ __('Cerrar sesion') }}</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                    </form>
             </div>
           </li>
       @endguest
