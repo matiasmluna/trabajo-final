@@ -128,7 +128,7 @@ Proyecto integrador
   }
 
   .card-body {
-	height: 255px;
+	height: 105px!important;
 	background: #fff;
 	border-radius: 0 0 25px 25px;
   }
