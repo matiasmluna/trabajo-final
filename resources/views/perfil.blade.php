@@ -4,72 +4,61 @@ Nosotros - Didi Tienda Deportiva
 @endsection
 
 @section('main')
+<div class="row">
+  <div class="col-lg-6 text-center">
+    <div class="subpages" style="margin-top:20px;">
+      <h2 class="mt-1">Perfil</h2>
+      <div class="avatar">
+        <img class="user-avatar" src="/storage/{{Auth::user()->avatar}}" alt="" style="border-radius: 50%" width="100">
 
-
-<div class="section nosotros anchor">
-  <div class="center row">
-    <div class="text left col-lg-6 col-sm-12" style="padding-top: 15px;">
-      <div class="image res-mobile">
       </div>
-      <!-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-      <img class="user-avatar" src="/storage/{{Auth::user()->avatar}}" alt="">
-      {{ Auth::user()->name }} <span class="caret"></span>
-      </a> -->
-      <div class="subpages">
-        <div class="avatar">
-          <img class="user-avatar" src="/storage/{{Auth::user()->avatar}}" alt="" style="border-radius: 50%" width="100">
-          
-        </div>
-        <div class="nombre">
-          <p><b>Nombre:</b> {{ Auth::user()->name }}</p>
+      <div class="nombre">
+        <p><b>Nombre:</b></p>
+        <p>{{ Auth::user()->name }}</p>
 
-        </div>
-        <div class="email">
-          <p><b>Email:</b> {{Auth::user()->email}}</p>
-        </div>
       </div>
-    </div>
-    <div class="image center col-lg-6 col-sm-12">
-      <div class="box-banner">
-        <a>
-          <img width="300px" alt="nosotros" src="images/logo0.png" complete="complete"></a>
+      <div class="email">
+        <p><b>Email:</b></p>
+        <p>{{Auth::user()->email}}</p>
       </div>
     </div>
   </div>
-</div>
 
-<section id="form" style="margin-top:20px;"><!--form-->
-	<div class="container">
-		<div class="row">
-			@if(Session::has('flash_message_success'))
-	            <div class="alert alert-success alert-block">
-	                <button type="button" class="close" data-dismiss="alert">×</button> 
-	                    <strong>{!! session('flash_message_success') !!}</strong>
-	            </div>
-	        @endif
-	        @if(Session::has('flash_message_error'))
-	            <div class="alert alert-error alert-block" style="background-color:#f4d2d2">
-	                <button type="button" class="close" data-dismiss="alert">×</button> 
-	                    <strong>{!! session('flash_message_error') !!}</strong>
-	            </div>
-    		@endif  
-			<div class="col-sm-4 col-sm-offset-1">
-				<div class="login-form">
-					<h2>Actualizar datos</h2>
-					<form id="accountForm" name="accountForm" action="{{ url('/perfil') }}" method="POST">{{ csrf_field() }}
-						<input value="{{ $userDetails->email }}" readonly="" />
-						<input value="{{ $userDetails->name }}" id="name" name="name" type="text" placeholder="Name"/>
-						<input value="{{ $userDetails->address }}" id="address" name="address" type="text" placeholder="Direccion"/>
-						<input value="{{ $userDetails->mobile }}" id="mobile" name="mobile" type="text" placeholder="Telefono"/>
-						<button type="submit" class="btn btn-success">Actualizar</button>
-					</form>
-				</div>
-			</div>
-			<div class="col-sm-1">
-				<h2 class="or"></h2>
-			</div>
-		</div>
-	</div>
-</section><!--/form-->
+  <div class="col-lg-6">
+    <section id="form" style="margin-top:20px;"><!--form-->
+      @if(Session::has('flash_message_success'))
+      <div class="alert alert-success alert-block">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>{!! session('flash_message_success') !!}</strong>
+      </div>
+      @endif
+      @if(Session::has('flash_message_error'))
+      <div class="alert alert-error alert-block" style="background-color:#f4d2d2">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>{!! session('flash_message_error') !!}</strong>
+      </div>
+      @endif
+      <div class="text-center">
+        <div class="login-form">
+          <h2>Actualizar datos</h2>
+          <form id="accountForm" name="accountForm" action="{{ url('/perfil') }}" method="POST">{{ csrf_field() }}
+            <div class="">
+              <p><b>Cambiar email</b></p>
+              <input value="{{ $userDetails->email }}" id="email" name="email" type="text" placeholder="Email"/>
+            </div>
+            <div class="">
+              <p><b>Cambiar nombre</b></p>
+              <input value="{{ $userDetails->name }}" id="name" name="name" type="text" placeholder="Nombre"/>
+            </div>
+
+            <div class="mb-2 mt-2">
+              <button type="submit" class="btn btn-success">Actualizar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section><!--/form-->
+  </div>
+</div>
 
 @endsection
