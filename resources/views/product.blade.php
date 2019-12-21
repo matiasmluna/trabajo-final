@@ -21,7 +21,7 @@
         <p>{{ $product->description }}</p>
         <h3 class=" font-weight-bold">${{ $product->price }}</h3>
         @guest
-          <a href="{{ route('login') }}" class="btn btn-dark btn-lg">Agregar al carrito</button>
+          <a href="{{ route('login') }}"> <p>Debes iniciar sesion para comprar</p>  </button>    
         @else
           <form action="{{ route('addProductToCart', ['productId' => $product->id]) }}" method="post">
             {{ csrf_field() }}
