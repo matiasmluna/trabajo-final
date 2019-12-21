@@ -13,7 +13,7 @@
                         <b class="logo-icon p-l-10">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="https://respuestas.tips/wp-content/uploads/2014/08/hermana-de-dexter.jpg" alt="homepage" class="light-logo" style="width: 50px;">
+                            <img src="{{ asset('images/logo0.png')}}"alt="homepage" class="light-logo" style="width: 50px;">
 
                         </b>
                         <!--End Logo icon -->
