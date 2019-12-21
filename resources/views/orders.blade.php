@@ -1,11 +1,11 @@
 @extends('layout')
 
 @section('title')
-Mis órdenes - Reebok Argentina - Tienda Online - Be More Human
+Mis órdenes - Sport DeeDee
 @endsection
 
 @section('main')
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-12">
       <h1>Mis órdenes</h1>
