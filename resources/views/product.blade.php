@@ -11,7 +11,7 @@
   <div class="container-fluid">
     <div class="row mt-5 mb-5">
       <div class="col-xs-9 col-md-7">
-          <img src="{{ $product->imageUrl }}" alt="{{ $product->name }}" />
+          <img src="{{ asset('/images/backend_img/product/small/'.$product->image) }}" alt="{{ $product->name }}" />
       </div>
       <div class="col-xs-3 col-md-5" >
         <h2 class="product-category-name">

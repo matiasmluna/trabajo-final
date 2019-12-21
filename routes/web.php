@@ -18,12 +18,10 @@ Route::get('/categories', 'CategoryController@show');
 Route::get('/preguntasfrecuentes', function () {
     return view("faq");
 });
-Route::get('/nosotros', function () {
-    return view("nosotros");
-});
-Route::get('/contacto', function () {
-    return view("contacto");
-});
+
+Route::match(['get', 'post'],'/contacto', 'contactoController@contacto');
+
+Route::get('/contacto',function (){return view("contacto");});
 Route::match(['get', 'post'], 'perfil', 'UsersController@perfil');
 // Route::get('/categories/{categorySlug}', 'CategoryController@index')->name('category');
 Route::get('/categories/{categorySlug}', 'CategoryController@index')->name('category');

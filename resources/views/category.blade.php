@@ -7,7 +7,7 @@
 @section('main')
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 mt-3">
         <h1>{{ $category->name }}</h1>
         <div class="container">
           <div class="row">
