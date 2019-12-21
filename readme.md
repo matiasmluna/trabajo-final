@@ -1,22 +1,20 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
-
-## About Laravel
-
-Proyecto Tienda Didi Deportiva
-Hecha en Laravel
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
+<article class="markdown-body entry-content p-5" itemprop="text"><h1><a id="user-content-reebok-ecommerce" class="anchor" aria-hidden="true" href="#reebok-ecommerce"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reebok Ecommerce</h1>
+<p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/04e938b0c161a8456f6bea25aa5be11ecb4f992a/68747470733a2f2f636c6475702e636f6d2f725377397a484863556c2e706e67"><img src="https://camo.githubusercontent.com/04e938b0c161a8456f6bea25aa5be11ecb4f992a/68747470733a2f2f636c6475702e636f6d2f725377397a484863556c2e706e67" alt="screenshot" data-canonical-src="https://cldup.com/rSw9zHHcUl.png" style="max-width:100%;"></a></p>
+<h2><a id="user-content-installation" class="anchor" aria-hidden="true" href="#installation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<pre><code>git clone git@github.com:sachalifs/reebok-ecommerce.git
+cd reebok-ecommerce
+composer install
+# Crear archivo .env a partir del .env.example
+# Crear esquema en la db y configurar .env con el nombre del esquema y la contraseña de la db
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+php artisan serve
+</code></pre>
+<h2><a id="user-content-database-design" class="anchor" aria-hidden="true" href="#database-design"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Database Design</h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/4f5fce679de234fce6df4fdbf9fe3a2782cee4da/68747470733a2f2f636c6475702e636f6d2f7351732d626d616668492e706e67"><img src="https://camo.githubusercontent.com/4f5fce679de234fce6df4fdbf9fe3a2782cee4da/68747470733a2f2f636c6475702e636f6d2f7351732d626d616668492e706e67" alt="Database Design" data-canonical-src="https://cldup.com/sQs-bmafhI.png" style="max-width:100%;"></a></p>
+<h2><a id="user-content-javascript" class="anchor" aria-hidden="true" href="#javascript"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JavaScript</h2>
+<p>En la parte de órdenes de compra, hay filas de la tabla que están ocultas. En el <code>layout.blade.php</code> agregué un <code>yield('scripts')</code> para agregar scripts de JS en las pantallas que lo requieran.</p>
+<p>En <code>orders.blade.php</code> completé ese hueco incluyendo un <a href="https://github.com/sachalifs/reebok-ecommerce/blob/master/public/js/orders.js"><code>orders.js</code></a> que pueden encontrar en <a href="https://github.com/sachalifs/reebok-ecommerce/blob/master/public/js/orders.js"><code>/public/js/orders.js</code></a>.</p>
+<p>En ese archivo lo que hago es mostrar/ocultar esas filas cuando se hace click en una de las filas de la orden, para desplegar las filas de sus productos.</p>
+</article>
