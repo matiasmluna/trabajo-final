@@ -1,7 +1,7 @@
 
 @extends('layout')
 @section('title')
-  Didi Tienda Deportiva
+ Categorias - Sport DeeDee
 @endsection
 
 @section('main')
