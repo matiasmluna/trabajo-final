@@ -9,7 +9,7 @@
             <a href="{{url('')}}"> <img src="{{ asset('images/logo0.png')}}" style="width: 100px;height: 100px;" alt="logo"></a>
           </div>
 
-          <div class="buscador1 col-sm">
+          <!-- <div class="buscador1 col-sm">
             <form action="/"  method="POST">
               {{ csrf_field() }}
               <div class="input-group w-100">
@@ -20,8 +20,8 @@
                     </button>
                 </div>
               </div>
-            </form> <!-- busqueda .end// -->
-          </div> <!-- col.// -->
+            </form>
+          </div>  -->
 
           <div class="boton1 col-sm">
             <ul class="navbar-nav">
