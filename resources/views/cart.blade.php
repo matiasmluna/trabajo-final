@@ -7,7 +7,7 @@ Carrito de Compras
 @section('main')
 <div class="container">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 mt-3">
       <h1>Carrito</h1>
       @if (Auth::user()->productsInCart->isNotEmpty())
         <table class="table table-borderless products-in-cart">
@@ -24,7 +24,9 @@ Carrito de Compras
             @foreach(Auth::user()->productsInCart as $productInCart)
               <tr>
                 <td>
-                  <img src="{{ $productInCart->product->imageUrl }}" alt="{{ $productInCart->product->name }}" />
+                  <img src="{{ asset('/images/backend_img/product/small/'.$productInCart->product->image) }}" style="
+    width: 80px;
+" alt="{{ $productInCart->product->name }}" />
                   <td>{{ $productInCart->product->name }}</td>
                 </th>
                 <td>{{ $productInCart->count }}</td>

@@ -49,7 +49,7 @@
             <!-- Form actions -->
             <div class="form-group">
               <div class="col-md-12 text-right">
-                <button type="submit" id="enviarContacto" onclick="alert()" class="btn btn-primary btn-lg">Enviar</button>
+                <button type="submit" id="enviarContacto" class="btn btn-primary btn-lg">Enviar</button>
               </div>
             </div>
           </fieldset>

@@ -13,7 +13,7 @@
             <form action="/"  method="POST">
               {{ csrf_field() }}
               <div class="input-group w-100">
-                <input type="text" class="form-control" placeholder="Buscar...">
+                <input type="text" class="form-control" id="texto" name"texto" placeholder="Buscar...">
                 <div class="input-group-append">
                     <button class="btn btn-dark" type="submit">
                       <i class="fa fa-search"></i> Buscar
@@ -61,7 +61,7 @@
                         @foreach(Auth::user()->productsInCart as $productInCart)
                         <div class="row cart-detail">
                           <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
-                            <img src="{{ $productInCart->product->image }}" />
+                            <img style="weight:60px;width: 60px;" src="{{ asset('/images/backend_img/product/small/'.$productInCart->product->image) }}" />
                           </div>
                           <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
                             <p>{{ $productInCart->product->name }}</p>

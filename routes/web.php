@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,9 +13,11 @@
 */
 
 Route::get('/', 'HomeController@index');
-// Route::get('/categories/productos/{productId}', 'ProductsController@index')->name('product');
+Route::match(['get', 'post'], 'HomeController@buscador');
+
+
 Route::get('/categories', 'CategoryController@show');
-// Route::get('/categories/productos', 'ProductsController@showProducts');
+
 Route::get('/preguntasfrecuentes', function () {
     return view("faq");
 });

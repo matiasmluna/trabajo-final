@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Alert;
 
 class contactoController extends Controller
 {
@@ -23,11 +24,8 @@ class contactoController extends Controller
     ];
 
     $this->validate($req, $reglas,$mensajes);
-
+    alert()->success('Gracias por comunicarte!','En breve te estaremos respondiendo.');
     return view('contacto');
   }
 
-  public function alert(){
-    alert()->success('Gracias por comunicarte!','En breve te estaremos respondiendo.');
-  }
 }

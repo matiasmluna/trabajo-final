@@ -92,7 +92,8 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="user-avatar" src="/storage/{{Auth::user()->avatar}}" alt=""></a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <!-- <img class="user-avatar" src="/storage/{{Auth::user()->avatar}}" alt=""></a> -->
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
                                 <a class="dropdown-item" href="{{ url('/admin/change-password') }}"><i class="ti-settings m-r-5 m-l-5"></i> Cambiar Contraseña</a>
                                 <div class="dropdown-divider"></div>

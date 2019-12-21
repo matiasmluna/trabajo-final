@@ -28,28 +28,28 @@
           <aside class="col-sm-3 col-md-3 white marginMobile">
             <h5 class="title">Institucional</h5>
             <ul class="list-unstyled">
-              <li> <a href="#">¿Quiénes somos?</a></li>
-              <li> <a href="#">Investor Relations</a></li>
+              <li> <a href="/nosotros">¿Quiénes somos?</a></li>
+              <!-- <li> <a href="#">Investor Relations</a></li>
               <li> <a href="#">Términos y condiciones</a></li>
-              <li> <a href="#">Eventos</a></li>
+              <li> <a href="#">Eventos</a></li> -->
             </ul>
           </aside>
           <aside class="col-sm-3  col-md-3 white marginMobile">
             <h5 class="title">Ayuda</h5>
             <ul class="list-unstyled">
-              <li> <a href="#"> Entregas </a></li>
+              <!-- <li> <a href="#"> Entregas </a></li>
               <li> <a href="#"> Pagos </a></li>
-              <li> <a href="#"> Cambios </a></li>
-              <li> <a href="contacto.php"> Contactos </a></li>
+              <li> <a href="#"> Cambios </a></li> -->
+              <li> <a href="/contacto"> Contactos </a></li>
             </ul>
           </aside>
           <aside class="col-sm-3  col-md-3 white marginMobile">
-            <h5 class="title">Políticas</h5>
+            <!-- <h5 class="title">Políticas</h5>
             <ul class="list-unstyled">
               <li> <a href="#"> Política de Privacidad </a></li>
               <li> <a href="#"> Política de Envio Gratis </a></li>
 
-            </ul>
+            </ul> -->
           </aside>
           <aside class="col-sm-3">
             <article class="white marginMobile">
