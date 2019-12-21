@@ -69,7 +69,7 @@
                             <label for="" class="col-md-4 col-form-label text-md-right">{{ __('Pais') }}</label>
 
                             <div class="col-md-6" id="pais">
-                              <select id="countries" onchange="admSelectCheck(this);">
+                              <select id="country" onchange="admSelectCheck(this);" name="country" required>
                                 <option>Seleccionar</option>
                                 <option id="argentina">Argentina</option>
                               </select>
@@ -77,7 +77,7 @@
                         </div>
 
                         <div  class="form-group row" id="provincia" style="display:none;">
-                            <label for="" class="col-md-4 col-form-label text-md-right">{{ __('Provincia') }}</label> <select id="province"></select>
+                            <label for="" class="col-md-4 col-form-label text-md-right">{{ __('Provincia') }}</label> <select id="state" name="state" ></select>
 
 
                         </div>
@@ -123,7 +123,7 @@ fetch('https://restcountries.eu/rest/v2/all')
 })
  .then(function(data){
    let paises = data;
-   let miSelected = document.getElementById('countries');
+   let miSelected = document.getElementById('country');
    for (let i = 0; i < paises.length; i++){
      miSelected.innerHTML += '<option id='+paises[i].name+'>'+paises[i].name+'</option>';
    }
@@ -139,7 +139,7 @@ fetch('https://restcountries.eu/rest/v2/all')
 {{-- script api provincias--}}
 <script type="text/javascript">
 
-let dropdown = document.getElementById('province');
+let dropdown = document.getElementById('state');
 
 window.addEventListener("load", function() {
 fetch('https://apis.datos.gob.ar/georef/api/provincias?campos=nombre')
@@ -148,7 +148,7 @@ fetch('https://apis.datos.gob.ar/georef/api/provincias?campos=nombre')
 })
  .then(function(data){
    let provincias = data.provincias;
-   let miSelect = document.getElementById('province');
+   let miSelect = document.getElementById('state');
    for (let i = 0; i < provincias.length; i++){
      miSelect.innerHTML += '<option>'+provincias[i].nombre+'</option>';
    }
